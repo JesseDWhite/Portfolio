@@ -13,14 +13,12 @@ function App() {
         container
         display='flex'
       >
+        <Contact />
         <Grid>
           <Intro />
         </Grid>
         <Grid>
           <Projects />
-        </Grid>
-        <Grid>
-          <Contact />
         </Grid>
         <Grid>
           <About />
