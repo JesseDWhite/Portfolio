@@ -4,23 +4,32 @@ import Intro from './Components/Intro'
 import Projects from './Components/Projects';
 import Contact from './Components/Contact';
 import About from './Components/About';
-import { Grid, Paper } from '@mui/material';
+import { Grid } from '@mui/material';
 
 function App() {
   return (
     <>
       <Grid
         container
-        display='flex'
       >
         <Contact />
-        <Grid>
+        <Grid
+          sx={{
+            height: '100vh'
+          }}
+        >
           <Intro />
         </Grid>
-        <Grid>
+        <Grid
+          sx={{
+            height: '100vh'
+          }}>
           <Projects />
         </Grid>
-        <Grid>
+        <Grid
+          sx={{
+            height: '100vh'
+          }}>
           <About />
         </Grid>
       </Grid>

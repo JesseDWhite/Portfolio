@@ -1,7 +1,16 @@
 import React from 'react';
-import { Link, SpeedDial, Box, SpeedDialAction } from '@mui/material';
-import { GitHub, LinkedIn, PhoneIphone, Email, EmojiPeopleRounded, VideoCameraFront } from '@mui/icons-material';
+import { SpeedDial, SpeedDialAction, Fade, Slide } from '@mui/material';
+import {
+  GitHub,
+  LinkedIn,
+  PhoneIphoneTwoTone,
+  EmailTwoTone,
+  EmojiPeopleRounded,
+  VideoCameraFrontTwoTone
+} from '@mui/icons-material';
 import SpeedDialIcon from '@mui/material/SpeedDialIcon';
+import HeadShot from '../img/HeadShot.jpg';
+
 
 const Contact = () => {
   const actions = [
@@ -16,17 +25,17 @@ const Contact = () => {
       route: 'https://www.linkedin.com/in/jesse-d-white/'
     },
     {
-      icon: <PhoneIphone />,
+      icon: <PhoneIphoneTwoTone />,
       name: '503.523.7527',
       route: 'tel:5035237527'
     },
     {
-      icon: <Email />,
+      icon: <EmailTwoTone />,
       name: 'jesse.white6@gmail.com',
       route: 'https://mail.google.com/mail/?view=cm&fs=1&to=jesse.white6@gmail.com'
     },
     {
-      icon: <VideoCameraFront />,
+      icon: <VideoCameraFrontTwoTone />,
       name: 'Discord',
       route: 'https://discordapp.com/users/9372/'
     }
@@ -37,20 +46,43 @@ const Contact = () => {
         ariaLabel="Contact Information"
         sx={{
           position: 'fixed',
-          top: 50,
-          right: 50,
-          color: 'red'
+          top: 80,
+          right: 80,
+          transition: 'right 0.50s',
+          '&: hover': {
+            right: 90,
+          }
         }}
         direction='down'
-        icon={<SpeedDialIcon openIcon={<EmojiPeopleRounded />} />}
+        icon={<img
+          src={HeadShot}
+          alt='Jesse White Headshot'
+          style={{
+            width: 80,
+            borderRadius: '100%',
+            border: 'solid',
+            borderColor: 'aqua',
+          }}
+        />}
       >
         {actions.map((action) => (
           <SpeedDialAction
+            sx={{
+              "&:hover": {
+                background: 'lightblue',
+              },
+            }}
             key={action.name}
             icon={action.icon}
-            tooltipTitle={action.name}
+            tooltipTitle={
+              <h2
+                style={{
+                  color: 'lightblue',
+                }}>
+                {action.name}
+              </h2>}
             href={action.route}
-            tooltipOpen
+            TransitionComponent={Fade}
           />
         ))}
       </SpeedDial>
