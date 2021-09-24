@@ -1,18 +1,17 @@
 import React from 'react';
-import { SpeedDial, SpeedDialAction, Fade, Slide } from '@mui/material';
+import { SpeedDial, SpeedDialAction, Fade } from '@mui/material';
 import {
   GitHub,
   LinkedIn,
   PhoneIphoneTwoTone,
   EmailTwoTone,
-  EmojiPeopleRounded,
   VideoCameraFrontTwoTone
 } from '@mui/icons-material';
-import SpeedDialIcon from '@mui/material/SpeedDialIcon';
 import HeadShot from '../img/HeadShot.jpg';
+import Button from '@mui/material/Button';
 
+const Contact = (props) => {
 
-const Contact = () => {
   const actions = [
     {
       icon: <GitHub />,
@@ -40,6 +39,7 @@ const Contact = () => {
       route: 'https://discordapp.com/users/9372/'
     }
   ]
+
   return (
     <>
       <SpeedDial
