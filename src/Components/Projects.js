@@ -1,9 +1,11 @@
 import React from 'react';
 import { Typography, Grid, Paper, Box } from '@mui/material';
+import { PROJECTS } from '../Constants/ProjectsConstants';
 
 const Projects = () => {
   return (
     <>
+      <Typography variant='h3'>Here are some projects that I have worked on</Typography>
       <Box
         display='flex'
       >
@@ -13,51 +15,36 @@ const Projects = () => {
           justifyContent="flex-start"
           alignItems="flex-start"
         >
-          <Typography variant='h3'>Here are some projects that I have worked on</Typography>
-          <Grid
-            item
-          >
-            <Paper
-              elevation={12}
-              sx={{
-                width: 300,
-                height: 350,
-              }}
-            >Project</Paper>
-          </Grid>
-          <Grid
-            item
-          >
-            <Paper
-              elevation={12}
-              sx={{
-                width: 300,
-                height: 350,
-              }}
-            >Project</Paper>
-          </Grid>
-          <Grid
-            item
-          >
-            <Paper
-              elevation={12}
-              sx={{
-                width: 300,
-                height: 350,
-              }}
-            >Project</Paper>
-          </Grid>
-          <Grid
-            item
-          >
-            <Paper
-              elevation={12}
-              sx={{
-                width: 300,
-                height: 350,
-              }}
-            >Project</Paper>
-          </Grid>
+          {PROJECTS.map(project => {
+            return (
+              <Paper
+                elevation={12}
+                sx={{
+                  width: 300,
+                }}
+              >
+                <Typography>
+                  {project.name}
+                </Typography>
+                <Typography>
+                  {project.techStack.map(language => {
+                    return (
+                      <li>{language}</li>
+                    )
+                  })}
+                </Typography>
+                <Typography>
+                  {project.description}
+                </Typography>
+                <Typography>
+                  {project.link}
+                </Typography>
+                <Typography>
+                  {project.repo}
+                </Typography>
+              </Paper>
+            )
+          })}
         </Grid>
       </Box>
     </>
