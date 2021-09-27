@@ -1,5 +1,5 @@
 import React from 'react';
-import { SpeedDial, SpeedDialAction, Fade } from '@mui/material';
+import { SpeedDial, SpeedDialAction, Zoom, Grow } from '@mui/material';
 import {
   GitHub,
   LinkedIn,
@@ -8,9 +8,8 @@ import {
   VideoCameraFrontTwoTone
 } from '@mui/icons-material';
 import HeadShot from '../img/HeadShot.jpg';
-import Button from '@mui/material/Button';
 
-const Contact = (props) => {
+const Contact = () => {
 
   const actions = [
     {
@@ -67,22 +66,13 @@ const Contact = (props) => {
       >
         {actions.map((action) => (
           <SpeedDialAction
-            sx={{
-              "&:hover": {
-                background: 'lightblue',
-              },
-            }}
             key={action.name}
             icon={action.icon}
             tooltipTitle={
-              <h2
-                style={{
-                  color: 'lightblue',
-                }}>
-                {action.name}
-              </h2>}
+              <h2>{action.name}</h2>}
             href={action.route}
-            TransitionComponent={Fade}
+            TransitionComponent={Grow}
+            TransitionProps={{ timeout: 500 }}
           />
         ))}
       </SpeedDial>

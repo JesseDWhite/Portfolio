@@ -86,7 +86,8 @@ function App() {
 
         <Grid
           sx={{
-            height: '100vh'
+            height: '100vh',
+            width: '100vw'
           }}
         >
           <Contact />
@@ -94,7 +95,8 @@ function App() {
         </Grid>
         <Grid
           sx={{
-            height: '100vh'
+            height: '100vh',
+            width: '100vw'
           }}>
           <Projects />
         </Grid>

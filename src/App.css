@@ -1,5 +1,7 @@
 #root {
-  background: linear-gradient(rgb(10,25,41), rgb(17, 43, 70));
+  /* background: rgb(10,25,41); */
+  background: rgb(6, 16, 26);
+  /* background: black; */
   background-image: fixed;
   height: 100%;
   color: aqua;
