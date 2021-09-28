@@ -1,7 +1,21 @@
 import React from 'react';
-import { Typography, Grid, Card, CardContent, CardMedia, Button, CardActionArea, CardActions, Chip, Avatar, Tooltip, Grow } from '@mui/material';
+import {
+  Typography,
+  Grid,
+  Card,
+  CardContent,
+  CardMedia,
+  Button,
+  CardActionArea,
+  CardActions,
+  Chip,
+  Avatar,
+  Tooltip,
+  Grow
+} from '@mui/material';
 import { PROJECTS } from '../Constants/ProjectsConstants';
 import { GitHub } from '@mui/icons-material';
+import Programming from '../img/Programming.jpg'
 
 const Projects = () => {
   return (
@@ -12,22 +26,38 @@ const Projects = () => {
           boxShadow: 'none',
         }}
       >
-        <Typography
-          variant='h3'
+        <Grid
+          container
           sx={{
+            position: 'relative',
             textAlign: 'center',
-            fontWeight: 'bold',
-            fontSize: '60px',
-            textShadow: 'rgb(6,16,26) -4px 0px 0px',
-            color: 'rgb(77,72,152)',
-            WebkitBackgroundClip: 'text',
-            backgroundClip: 'text',
-            backgroundSize: 'fill',
-            marginTop: 8
           }}
         >
-          Below are projects of note I have worked on
-        </Typography>
+          <img src={Programming}
+            style={{
+              width: '100%',
+              height: '60vh',
+              objectFit: 'cover',
+              objectPosition: '12% 12%'
+            }}
+            alt='Jesse and Katherine in the forest'
+          />
+          <Typography
+            variant='h3'
+            sx={{
+              position: 'absolute',
+              top: '50%',
+              left: '50%',
+              transform: 'translate(-50%, -50%)',
+              fontWeight: 'bold',
+              fontSize: '100px',
+              textShadow: 'rgb(10,25,41) -8px 0px 0px',
+              color: 'rgb(77,72,152)',
+            }}
+          >
+            PROJECTS OF NOTE
+          </Typography>
+        </Grid>
         <Grid
           display='flex'
           flexWrap='wrap'
@@ -35,7 +65,7 @@ const Projects = () => {
           <Grid
             container
             direction='row'
-            alignItems="center"
+            alignItems="flex-start"
             justifyContent="flex-start"
           >
             {PROJECTS.map(project => {
@@ -50,8 +80,6 @@ const Projects = () => {
                     sx={{
                       position: 'relative',
                       bottom: 0,
-                      // maxWidth: 450,
-                      // width: '90%',
                       margin: 10,
                       borderRadius: 5,
                       backgroundColor: 'rgb(23,58,94)',

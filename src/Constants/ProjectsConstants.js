@@ -36,11 +36,4 @@ export const PROJECTS = [
     repo: 'https://github.com/JesseDWhite/AnimalShelter.Solution',
     image: Cat
   },
-  // {
-  //   name: '',
-  //   techStack: [],
-  //   description: '',
-  //   link: '',
-  //   repo: ''
-  // },
 ]

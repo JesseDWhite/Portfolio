@@ -3,6 +3,7 @@ import './App.css';
 import Intro from './Components/Intro'
 import Projects from './Components/Projects';
 import Contact from './Components/Contact';
+import Experience from './Components/Experience'
 import About from './Components/About';
 import { Grid } from '@mui/material';
 import { BACKGROUNDGIFS } from './Constants/BackGroundConstants';
@@ -29,7 +30,6 @@ function App() {
       >
         <Grid
           sx={{
-            // height: '100vh',
             width: '100vw'
           }}
         >
@@ -40,12 +40,14 @@ function App() {
             changeBackgroundImage={changeBackgroundImage}
           />
         </Grid>
+        <Grid>
+          <Projects />
+        </Grid>
         <Grid
           sx={{
-            // height: '100vh',
             width: '100vw'
           }}>
-          <Projects />
+          <Experience />
         </Grid>
         <Grid
           sx={{

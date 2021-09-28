@@ -1,31 +1,16 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { Typography, Card, IconButton } from '@mui/material';
-// import { BACKGROUNDGIFS } from '../Constants/BackGroundConstants';
 import ColorLensTwoToneIcon from '@mui/icons-material/ColorLensTwoTone';
 
 const Intro = (props) => {
 
   const { background, changeBackgroundImage } = props
 
-  // const [background, setBackground] = useState();
-  // const [theme, setTheme] = useState(false);
-
-  // useEffect(() => {
-  //   const randomBackground = BACKGROUNDGIFS[Math.floor(Math.random() * BACKGROUNDGIFS.length)];
-  //   setBackground(randomBackground);
-  // }, [theme])
-
-  // const changeBackgroundImage = () => {
-  //   (!theme) ?
-  //     setTheme(true) :
-  //     setTheme(false)
-  // }
-
   return (
     <>
       <Card
         sx={{
-          // height: '100vh',
+          height: '100vh',
           backgroundColor: 'rgb(6, 16, 26)'
         }}
       >
@@ -37,7 +22,7 @@ const Intro = (props) => {
             top: 120,
             fontSize: 150,
             fontWeight: 'bold',
-            color: 'rgb(0,255,255,0%)',
+            color: 'rgb(0,255,255,20%)',
             // WebkitTextStroke: '0.5px aqua',
             backgroundImage: `url(${background})`,
             WebkitBackgroundClip: 'text',
@@ -61,7 +46,7 @@ const Intro = (props) => {
             top: 120,
             fontSize: 250,
             fontWeight: 'bold',
-            color: 'rgb(0,255,255,0%)',
+            color: 'rgb(255,165,0,30%)',
             // WebkitTextStroke: '1.5px orange',
             backgroundImage: `url(${background})`,
             WebkitBackgroundClip: 'text',
@@ -85,7 +70,7 @@ const Intro = (props) => {
             top: 120,
             fontSize: 80,
             fontWeight: 'bold',
-            color: 'rgb(0,255,255,0%)',
+            color: 'rgb(0,255,255,20%)',
             // WebkitTextStroke: '0.5px aqua',
             backgroundImage: `url(${background})`,
             WebkitBackgroundClip: 'text',

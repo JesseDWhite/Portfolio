@@ -1,5 +1,5 @@
 import React from 'react';
-import { SpeedDial, SpeedDialAction, Zoom, Grow } from '@mui/material';
+import { SpeedDial, SpeedDialAction, Grow } from '@mui/material';
 import {
   GitHub,
   LinkedIn,

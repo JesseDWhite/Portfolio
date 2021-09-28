@@ -1,0 +1,146 @@
+import React from 'react';
+import {
+  Typography,
+  Card,
+  CardContent,
+  Grid,
+  Chip
+} from '@mui/material'
+import Work from '../img/Work.jpg';
+import { EXPERIENCECONSTANTS } from '../Constants/ExperienceConstants';
+
+const Experience = () => {
+  return (
+    <>
+      <Card
+        sx={{
+          backgroundColor: 'rgb(6, 16, 26)'
+        }}
+      >
+        <Grid
+          container
+          sx={{
+            position: 'relative',
+            textAlign: 'center',
+          }}
+        >
+          <img src={Work}
+            style={{
+              width: '100%',
+              height: '60vh',
+              objectFit: 'cover',
+              objectPosition: '12% 12%'
+            }}
+            alt='Jesse and Katherine in the forest'
+          />
+          <Typography
+            variant='h3'
+            sx={{
+              position: 'absolute',
+              top: '50%',
+              left: '50%',
+              transform: 'translate(-50%, -50%)',
+              fontWeight: 'bold',
+              fontSize: '100px',
+              textShadow: 'rgb(10,25,41) -8px 0px 0px',
+              color: 'rgb(77,72,152)',
+            }}
+          >
+            EXPERIENCE
+          </Typography>
+        </Grid>
+        <Grid
+          display='flex'
+          flexWrap='wrap'
+          sx={{
+            color: 'white',
+            minHeight: '100vh'
+          }}
+        >
+          <Grid
+            container
+            direction='row'
+            alignItems="center"
+            justifyContent="flex-start"
+          >
+            {EXPERIENCECONSTANTS.map(experience => {
+              return (
+                <Grid
+                  md={12}
+                  lg={6}
+                  xl={3}
+                >
+                  <Card
+                    elevation={5}
+                    sx={{
+                      position: 'relative',
+                      bottom: 0,
+                      margin: 10,
+                      padding: 2,
+                      borderRadius: 5,
+                      backgroundColor: 'rgb(23,58,94)',
+                      color: 'white',
+                      transition: 'bottom 0.50s, boxShadow 0.50s',
+                      '&: hover': {
+                        boxShadow: '0px 0px 0px 3px pink',
+                        bottom: 20
+                      }
+                    }}
+                  >
+                    <CardContent>
+                      <Typography
+                        gutterBottom
+                        variant="h5"
+                        component="div"
+                        sx={{
+                          textAlign: 'center'
+                        }}
+                      >
+                        {experience.name}
+                      </Typography>
+                      <Typography
+                        gutterBottom
+                        variant="h5"
+                        component="div"
+                        sx={{
+                          textAlign: 'center',
+                          fontSize: 20
+                        }}
+                      >
+                        {experience.title}
+                      </Typography>
+                      <Chip
+                        label={`${experience.startDate} - ${experience.endDate}`}
+                        color='secondary'
+                        sx={{
+                          marginBottom: 1,
+                          position: 'relative',
+                          left: '50%',
+                          transform: 'translate(-50%)',
+                        }}
+                      />
+                      <Typography variant="body2">
+                        {experience.jobDescription}
+                      </Typography>
+                      <Typography variant="body2">
+                        {experience.jobDuties.map(duty => {
+                          return (
+                            <li>{duty}</li>
+                          )
+                        })}
+                      </Typography>
+                    </CardContent>
+                  </Card>
+                </Grid>
+              )
+            })
+            }
+          </Grid>
+        </Grid>
+      </Card>
+    </>
+  )
+
+}
+
+export default Experience;
