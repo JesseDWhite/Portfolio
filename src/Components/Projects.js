@@ -20,9 +20,7 @@ const Projects = () => {
             fontSize: '60px',
             textShadow: 'rgb(6,16,26) -4px 0px 0px',
             color: 'rgb(77,72,152)',
-            // backgroundImage: `url(https://media.giphy.com/media/hugQmENCWTyPM3yG5D/source.gif?cid=ecf05e47buaj0yolklpw8xrfdlp4vlj8y6l8haj8z177y79x&rid=source.gif&ct=g)`,
             WebkitBackgroundClip: 'text',
-            // WebkitTextStroke: '0.75px grey',
             backgroundClip: 'text',
             backgroundSize: 'fill',
             marginTop: 8
@@ -73,6 +71,8 @@ const Projects = () => {
                       arrow
                     >
                       <CardActionArea
+                        target='_blank'
+                        rel='noopener noreferrer'
                         href={project.link}
                       >
                         <CardMedia

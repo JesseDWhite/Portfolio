@@ -70,6 +70,8 @@ const Contact = () => {
             icon={action.icon}
             tooltipTitle={
               <h2>{action.name}</h2>}
+            target='_blank'
+            rel='noopener noreferrer'
             href={action.route}
             TransitionComponent={Grow}
             TransitionProps={{ timeout: 500 }}

@@ -1,22 +1,25 @@
 import React, { useState, useEffect } from 'react';
 import { Typography, Card, IconButton } from '@mui/material';
-import { BACKGROUNDGIFS } from '../Constants/BackGroundConstants';
+// import { BACKGROUNDGIFS } from '../Constants/BackGroundConstants';
 import ColorLensTwoToneIcon from '@mui/icons-material/ColorLensTwoTone';
 
-const Intro = () => {
-  const [background, setBackground] = useState();
-  const [theme, setTheme] = useState(false);
+const Intro = (props) => {
 
-  useEffect(() => {
-    const randomBackground = BACKGROUNDGIFS[Math.floor(Math.random() * BACKGROUNDGIFS.length)];
-    setBackground(randomBackground);
-  }, [theme])
+  const { background, changeBackgroundImage } = props
 
-  const changeBackgroundImage = () => {
-    (!theme) ?
-      setTheme(true) :
-      setTheme(false)
-  }
+  // const [background, setBackground] = useState();
+  // const [theme, setTheme] = useState(false);
+
+  // useEffect(() => {
+  //   const randomBackground = BACKGROUNDGIFS[Math.floor(Math.random() * BACKGROUNDGIFS.length)];
+  //   setBackground(randomBackground);
+  // }, [theme])
+
+  // const changeBackgroundImage = () => {
+  //   (!theme) ?
+  //     setTheme(true) :
+  //     setTheme(false)
+  // }
 
   return (
     <>
