@@ -1,6 +1,7 @@
 import Write from '../img/Write.jpg';
 import Beer from '../img/Beer.jpg';
 import Space from '../img/Space.jpg';
+import Cat from '../img/Cat.jpg'
 
 export const PROJECTS = [
   {
@@ -26,6 +27,14 @@ export const PROJECTS = [
     link: 'https://nostalgic-joliot-c01fcb.netlify.app/',
     repo: 'https://github.com/JesseDWhite/super-galactic-age-calculator',
     image: Space
+  },
+  {
+    name: 'Blind Cat Rescue',
+    techStack: ['C#', 'NET', 'MySQL', 'Entity Framework Core', 'Swagger'],
+    description: 'Blind Cat Rescue takes in all types of animals, but has a soft spot for blind cats. Use this API to access their inventory of current adoptable animals.',
+    link: 'https://github.com/JesseDWhite/AnimalShelter.Solution',
+    repo: 'https://github.com/JesseDWhite/AnimalShelter.Solution',
+    image: Cat
   },
   // {
   //   name: '',

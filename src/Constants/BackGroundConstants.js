@@ -9,5 +9,7 @@ export const BACKGROUNDGIFS = [
   'https://media.giphy.com/media/l1J9xRxf0x8zMnA4g/source.gif?cid=ecf05e47293t2tk3oju4vuuulb11wwom93wcfwajt3s0orug&rid=source.gif&ct=g',
   'https://media.giphy.com/media/kBwLmrLOxFvXhSVMGe/source.gif?cid=ecf05e47hgdblcz5p6wiubkfxhgi08bryqalxd6uoiqqvwy2&rid=source.gif&ct=g',
   'https://media.giphy.com/media/OK5LK5zLFfdm/giphy.gif?cid=ecf05e474s86enstnjhkvjl9btrfdhvg1az61lolzj7s232v&rid=giphy.gif&ct=g',
-  'https://media.giphy.com/media/Wy3Q0fuNIJmYn62Lcv/source.gif?cid=ecf05e47ssoxleyb8x8iicup6kp0s9a5uvqrhesvdhbnbl9d&rid=source.gif&ct=g'
+  'https://media.giphy.com/media/Wy3Q0fuNIJmYn62Lcv/source.gif?cid=ecf05e47ssoxleyb8x8iicup6kp0s9a5uvqrhesvdhbnbl9d&rid=source.gif&ct=g',
+  'https://media.giphy.com/media/eJoZAwRN9OI5QjthIE/source.gif?cid=790b76111ded9860ebdc7ced5e45f4b63358c6614e716ce6&rid=source.gif&ct=g',
+  'https://media.giphy.com/media/RjfXaD7oKscJaGO7c8/source.gif?cid=ecf05e477oe6tozjapmlsxyn6728ngnei725hfunn6pms7s9&rid=source.gif&ct=g'
 ]

@@ -5,24 +5,24 @@ import ColorLensTwoToneIcon from '@mui/icons-material/ColorLensTwoTone';
 
 const Intro = () => {
   const [background, setBackground] = useState();
-  const [changeBg, setChangeBg] = useState(false);
+  const [theme, setTheme] = useState(false);
 
   useEffect(() => {
     const randomBackground = BACKGROUNDGIFS[Math.floor(Math.random() * BACKGROUNDGIFS.length)];
     setBackground(randomBackground);
-  }, [changeBg])
+  }, [theme])
 
   const changeBackgroundImage = () => {
-    (!changeBg) ?
-      setChangeBg(true) :
-      setChangeBg(false)
+    (!theme) ?
+      setTheme(true) :
+      setTheme(false)
   }
 
   return (
     <>
       <Card
         sx={{
-          height: '100%',
+          // height: '100vh',
           backgroundColor: 'rgb(6, 16, 26)'
         }}
       >
@@ -35,11 +35,11 @@ const Intro = () => {
             fontSize: 150,
             fontWeight: 'bold',
             color: 'rgb(0,255,255,0%)',
-            WebkitTextStroke: '0.5px aqua',
+            // WebkitTextStroke: '0.5px aqua',
             backgroundImage: `url(${background})`,
             WebkitBackgroundClip: 'text',
             backgroundClip: 'text',
-            backgroundSize: 'cover',
+            // backgroundSize: 'cover',
             transition: 'color 0.50s, left 0.50s, -webkit-text-stroke 0.50s',
             '&: hover': {
               color: 'rgb(0,255,255,50%)',
@@ -59,11 +59,11 @@ const Intro = () => {
             fontSize: 250,
             fontWeight: 'bold',
             color: 'rgb(0,255,255,0%)',
-            WebkitTextStroke: '1.5px orange',
+            // WebkitTextStroke: '1.5px orange',
             backgroundImage: `url(${background})`,
             WebkitBackgroundClip: 'text',
             backgroundClip: 'text',
-            backgroundSize: 'cover',
+            // backgroundSize: 'cover',
             transition: 'color 0.50s, left 0.50s, -webkit-text-stroke 0.50s',
             '&: hover': {
               color: 'rgb(255,165,0,50%)',
@@ -83,11 +83,11 @@ const Intro = () => {
             fontSize: 80,
             fontWeight: 'bold',
             color: 'rgb(0,255,255,0%)',
-            WebkitTextStroke: '0.5px aqua',
+            // WebkitTextStroke: '0.5px aqua',
             backgroundImage: `url(${background})`,
             WebkitBackgroundClip: 'text',
             backgroundClip: 'text',
-            backgroundSize: 'cover',
+            // backgroundSize: 'cover',
             transition: 'color 0.50s, left 0.50s, -webkit-text-stroke 0.50s',
             '&: hover': {
               color: 'rgb(0,255,255,50%)',
@@ -106,6 +106,7 @@ const Intro = () => {
           onClick={() => changeBackgroundImage()}>
           <ColorLensTwoToneIcon
             color='primary'
+            aria-label="change background image"
             sx={{
               opacity: '50%',
               fontSize: '50px',

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Typography, Grid, Paper, Box, Card, CardContent, CardMedia, Button, CardActionArea, CardActions, Chip, Avatar, Tooltip, Fade, Zoom, Grow } from '@mui/material';
+import { Typography, Grid, Card, CardContent, CardMedia, Button, CardActionArea, CardActions, Chip, Avatar, Tooltip, Grow } from '@mui/material';
 import { PROJECTS } from '../Constants/ProjectsConstants';
 import { GitHub } from '@mui/icons-material';
 
@@ -15,11 +15,20 @@ const Projects = () => {
         <Typography
           variant='h3'
           sx={{
-            color: 'white',
-            margin: 2
+            textAlign: 'center',
+            fontWeight: 'bold',
+            fontSize: '60px',
+            textShadow: 'rgb(6,16,26) -4px 0px 0px',
+            color: 'rgb(77,72,152)',
+            // backgroundImage: `url(https://media.giphy.com/media/hugQmENCWTyPM3yG5D/source.gif?cid=ecf05e47buaj0yolklpw8xrfdlp4vlj8y6l8haj8z177y79x&rid=source.gif&ct=g)`,
+            WebkitBackgroundClip: 'text',
+            // WebkitTextStroke: '0.75px grey',
+            backgroundClip: 'text',
+            backgroundSize: 'fill',
+            marginTop: 8
           }}
         >
-          Here are some projects that I have worked on
+          Below are projects of note I have worked on
         </Typography>
         <Grid
           display='flex'
@@ -28,90 +37,97 @@ const Projects = () => {
           <Grid
             container
             direction='row'
-            alignItems="flex-start"
-            justifyContent="space-around"
+            alignItems="center"
+            justifyContent="flex-start"
           >
             {PROJECTS.map(project => {
               return (
-                <Card
-                  elevation={5}
-                  sx={{
-                    position: 'relative',
-                    bottom: 0,
-                    maxWidth: 425,
-                    margin: 10,
-                    borderRadius: 5,
-                    backgroundColor: 'rgb(23,58,94)',
-                    color: 'white',
-                    transition: 'bottom 0.50s, boxShadow 0.50s',
-                    '&: hover': {
-                      boxShadow: '0px 0px 0px 3px pink',
-                      bottom: 20
-                    }
-                  }}>
-                  <Tooltip
-                    title={<h3>VIEW FULL SITE</h3>}
-                    placement='top'
-                    TransitionComponent={Grow}
-                    enterDelay={800}
-                    TransitionProps={{ timeout: 300 }}
-                    arrow
-                  >
-                    <CardActionArea
-                      href={project.link}
+                <Grid
+                  md={12}
+                  lg={6}
+                  xl={4}
+                >
+                  <Card
+                    elevation={5}
+                    sx={{
+                      position: 'relative',
+                      bottom: 0,
+                      // maxWidth: 450,
+                      // width: '90%',
+                      margin: 10,
+                      borderRadius: 5,
+                      backgroundColor: 'rgb(23,58,94)',
+                      color: 'white',
+                      transition: 'bottom 0.50s, boxShadow 0.50s',
+                      '&: hover': {
+                        boxShadow: '0px 0px 0px 3px pink',
+                        bottom: 20
+                      }
+                    }}>
+                    <Tooltip
+                      title={<h3>VIEW FULL SITE</h3>}
+                      placement='top'
+                      TransitionComponent={Grow}
+                      enterDelay={800}
+                      TransitionProps={{ timeout: 300 }}
+                      arrow
                     >
-                      <CardMedia
-                        component="img"
-                        height="200"
-                        image={project.image}
-                        alt={project.name}
-                      />
-                      <CardContent
+                      <CardActionArea
+                        href={project.link}
+                      >
+                        <CardMedia
+                          component="img"
+                          height="250"
+                          image={project.image}
+                          alt={project.name}
+                        />
+                        <CardContent
+                          sx={{
+                            padding: 3,
+                          }}
+                        >
+                          <Typography gutterBottom variant="h5" component="div">
+                            {project.name}
+                          </Typography>
+                          <Typography variant="body2">
+                            {project.techStack.map(language => {
+                              return (
+                                <Chip
+                                  color="secondary"
+                                  size="small"
+                                  label={language}
+                                  avatar={<Avatar>{language[0]}</Avatar>}
+                                  sx={{
+                                    marginRight: 1,
+                                    marginBottom: 1
+                                  }}
+                                />
+                              )
+                            })}
+                          </Typography>
+                          <Typography variant="body2">
+                            {project.description}
+                          </Typography>
+                        </CardContent>
+                      </CardActionArea>
+                    </Tooltip>
+                    <CardActions>
+                      <Button
+                        size="block"
+                        color="secondary"
+                        variant="contained"
+                        href={project.repo}
+                        startIcon={<GitHub />}
                         sx={{
-                          padding: 3,
+                          margin: 2,
+                          width: '100%'
                         }}
                       >
-                        <Typography gutterBottom variant="h5" component="div">
-                          {project.name}
-                        </Typography>
-                        <Typography variant="body2">
-                          {project.techStack.map(language => {
-                            return (
-                              <Chip
-                                color="secondary"
-                                size="small"
-                                label={language}
-                                avatar={<Avatar>{language[0]}</Avatar>}
-                                sx={{
-                                  marginRight: 1,
-                                  marginBottom: 1
-                                }}
-                              />
-                            )
-                          })}
-                        </Typography>
-                        <Typography variant="body2">
-                          {project.description}
-                        </Typography>
-                      </CardContent>
-                    </CardActionArea>
-                  </Tooltip>
-                  <CardActions>
-                    <Button
-                      size="block"
-                      color="secondary"
-                      variant="contained"
-                      href={project.repo}
-                      startIcon={<GitHub />}
-                      sx={{
-                        margin: 2,
-                        width: '100%'
-                      }}
-                    >
-                      Repo
-                    </Button>
-                  </CardActions>
-                </Card>
+                        Repo
+                      </Button>
+                    </CardActions>
+                  </Card>
+                </Grid>
               )
             })}
           </Grid>
