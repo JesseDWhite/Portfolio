@@ -10,7 +10,8 @@ export const EXPERIENCECONSTANTS = [
       'Improve performance for UI/UX.',
       'Coordinate with CEO and other developers on workflow and ticket completion.',
       'Test feature branches and submit pull requests.'
-    ]
+    ],
+    link: 'https://www.linkedin.com/company/validateclub/about/'
   },
   {
     name: 'Rapid Response Bio Clean',
@@ -24,7 +25,8 @@ export const EXPERIENCECONSTANTS = [
       'Acquire approximately $30m in contract agreements',
       'Assist in growing business by approximately 175% each year of employment.',
       'Manage up to fifty staff members and special teams.'
-    ]
+    ],
+    link: 'https://rapidresponsebioclean.com/'
   },
   {
     name: 'Pacific Patrol Services',
@@ -37,7 +39,8 @@ export const EXPERIENCECONSTANTS = [
       'Improve performance for UI/UX.',
       'Coordinate with CEO and other developers on workflow and ticket completion.',
       'Test feature branches and submit pull requests.'
-    ]
+    ],
+    link: 'https://pacificpatrolservices.com/'
   },
   {
     name: 'AmeriCorps National Civilian Community Corps',
@@ -50,6 +53,7 @@ export const EXPERIENCECONSTANTS = [
       '8 weeks of infrastructure improvements in Washington State at 2 YMCA Camps.',
       '11 weeks of hot spring preservation at Agua Caliente in the Anza Borrego desert.',
       '6 weeks as a camp counselor for adults and children with special needs/disabilities.'
-    ]
+    ],
+    link: 'https://www.americorps.gov/'
   },
 ]

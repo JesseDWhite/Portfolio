@@ -1,4 +1,9 @@
 import React, { useState, useEffect } from 'react';
+import {
+  HashRouter as Router,
+  Route,
+  Switch
+} from 'react-router-dom';
 import './App.css';
 import Intro from './Components/Intro'
 import Projects from './Components/Projects';
@@ -25,37 +30,49 @@ function App() {
 
   return (
     <>
-      <Grid
+      {/* <Router>
+        <Switch> */}
+      {/* <Grid
         container
-      >
-        <Grid
+      > */}
+      {/* <Route path='/'> */}
+      {/* <Grid
           sx={{
-            width: '100vw'
+            // width: '100vw'
           }}
-        >
-          <Contact />
-          <Intro
-            background={background}
-            theme={theme}
-            changeBackgroundImage={changeBackgroundImage}
-          />
-        </Grid>
-        <Grid>
-          <Projects />
-        </Grid>
-        <Grid
+        > */}
+      <Contact />
+      <Intro
+        background={background}
+        theme={theme}
+        changeBackgroundImage={changeBackgroundImage}
+      />
+      {/* </Grid> */}
+      {/* </Route>
+            <Route path='/projects'> */}
+      {/* <Grid> */}
+      <Projects />
+      {/* </Grid> */}
+      {/* </Route> */}
+      {/* <Grid
           sx={{
             width: '100vw'
-          }}>
-          <Experience />
-        </Grid>
+          }}> */}
+      {/* <Route path='/experience'> */}
+      <Experience />
+      {/* </Route> */}
+      {/* </Grid>
         <Grid
           sx={{
             height: '100vh'
-          }}>
-          <About />
-        </Grid>
-      </Grid>
+          }}> */}
+      {/* <Route path='/about'> */}
+      <About />
+      {/* </Route> */}
+      {/* </Grid>
+      </Grid> */}
+      {/* </Switch>
+      </Router> */}
     </>
   );
 }

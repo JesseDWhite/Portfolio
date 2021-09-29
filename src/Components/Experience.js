@@ -3,6 +3,7 @@ import {
   Typography,
   Card,
   CardContent,
+  CardActionArea,
   Grid,
   Chip
 } from '@mui/material'
@@ -76,7 +77,6 @@ const Experience = () => {
                       position: 'relative',
                       bottom: 0,
                       margin: 10,
-                      padding: 2,
                       borderRadius: 5,
                       backgroundColor: 'rgb(23,58,94)',
                       color: 'white',
@@ -87,49 +87,73 @@ const Experience = () => {
                       }
                     }}
                   >
-                    <CardContent>
-                      <Typography
-                        gutterBottom
-                        variant="h5"
-                        component="div"
+                    <CardActionArea
+                      target='_blank'
+                      rel='noopener noreferrer'
+                      href={experience.link}
+                    >
+                      <CardContent
                         sx={{
-                          textAlign: 'center'
+                          padding: 3,
                         }}
                       >
-                        {experience.name}
-                      </Typography>
-                      <Typography
-                        gutterBottom
-                        variant="h5"
-                        component="div"
-                        sx={{
-                          textAlign: 'center',
-                          fontSize: 20
-                        }}
-                      >
-                        {experience.title}
-                      </Typography>
-                      <Chip
-                        label={`${experience.startDate} - ${experience.endDate}`}
-                        color='secondary'
-                        sx={{
-                          marginBottom: 1,
-                          position: 'relative',
-                          left: '50%',
-                          transform: 'translate(-50%)',
-                        }}
-                      />
-                      <Typography variant="body2">
-                        {experience.jobDescription}
-                      </Typography>
-                      <Typography variant="body2">
-                        {experience.jobDuties.map(duty => {
-                          return (
-                            <li>{duty}</li>
-                          )
-                        })}
-                      </Typography>
-                    </CardContent>
+                        <Typography
+                          gutterBottom
+                          variant="h5"
+                          component="div"
+                          sx={{
+                            textAlign: 'center',
+                          }}
+                        >
+                          {experience.name}
+                        </Typography>
+                        <Typography
+                          gutterBottom
+                          variant="h5"
+                          component="div"
+                          sx={{
+                            textAlign: 'center',
+                            fontSize: 20
+                          }}
+                        >
+                          {experience.title}
+                        </Typography>
+                        <Chip
+                          label={`${experience.startDate} - ${experience.endDate}`}
+                          color='secondary'
+                          sx={{
+                            marginBottom: 1,
+                            position: 'relative',
+                            left: '50%',
+                            transform: 'translate(-50%)',
+                          }}
+                        />
+                        <Typography
+                          sx={{
+                            fontStyle: 'italic',
+                            textAlign: 'center',
+                            fontSize: 15
+                          }}
+                          variant="body2"
+                        >
+                          {experience.jobDescription}
+                        </Typography>
+                        <hr />
+                        <Typography
+                          variant="body2"
+                          sx={{
+                            textAlign: 'center',
+                            fontSize: 15
+                          }}
+                        >
+                          {experience.jobDuties.map(duty => {
+                            return (
+                              <li>{duty}</li>
+                            )
+                          })}
+                        </Typography>
+                      </CardContent>
+                    </CardActionArea>
                   </Card>
                 </Grid>
               )

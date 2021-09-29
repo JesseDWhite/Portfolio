@@ -11,6 +11,7 @@ const Intro = (props) => {
       <Card
         sx={{
           height: '100vh',
+          width: '100%',
           backgroundColor: 'rgb(6, 16, 26)'
         }}
       >
@@ -22,8 +23,8 @@ const Intro = (props) => {
             top: 120,
             fontSize: 150,
             fontWeight: 'bold',
-            color: 'rgb(0,255,255,20%)',
-            // WebkitTextStroke: '0.5px aqua',
+            color: 'rgb(0,255,255,0%)',
+            WebkitTextStroke: '0.5px aqua',
             backgroundImage: `url(${background})`,
             WebkitBackgroundClip: 'text',
             backgroundClip: 'text',
@@ -46,8 +47,8 @@ const Intro = (props) => {
             top: 120,
             fontSize: 250,
             fontWeight: 'bold',
-            color: 'rgb(255,165,0,30%)',
-            // WebkitTextStroke: '1.5px orange',
+            color: 'rgb(255,165,0,0%)',
+            WebkitTextStroke: '1.5px orange',
             backgroundImage: `url(${background})`,
             WebkitBackgroundClip: 'text',
             backgroundClip: 'text',
@@ -70,8 +71,8 @@ const Intro = (props) => {
             top: 120,
             fontSize: 80,
             fontWeight: 'bold',
-            color: 'rgb(0,255,255,20%)',
-            // WebkitTextStroke: '0.5px aqua',
+            color: 'rgb(0,255,255,0%)',
+            WebkitTextStroke: '0.5px aqua',
             backgroundImage: `url(${background})`,
             WebkitBackgroundClip: 'text',
             backgroundClip: 'text',

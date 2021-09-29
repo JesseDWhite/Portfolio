@@ -11,5 +11,12 @@ export const BACKGROUNDGIFS = [
   'https://media.giphy.com/media/OK5LK5zLFfdm/giphy.gif?cid=ecf05e474s86enstnjhkvjl9btrfdhvg1az61lolzj7s232v&rid=giphy.gif&ct=g',
   'https://media.giphy.com/media/Wy3Q0fuNIJmYn62Lcv/source.gif?cid=ecf05e47ssoxleyb8x8iicup6kp0s9a5uvqrhesvdhbnbl9d&rid=source.gif&ct=g',
   'https://media.giphy.com/media/eJoZAwRN9OI5QjthIE/source.gif?cid=790b76111ded9860ebdc7ced5e45f4b63358c6614e716ce6&rid=source.gif&ct=g',
-  'https://media.giphy.com/media/RjfXaD7oKscJaGO7c8/source.gif?cid=ecf05e477oe6tozjapmlsxyn6728ngnei725hfunn6pms7s9&rid=source.gif&ct=g'
+  'https://media.giphy.com/media/RjfXaD7oKscJaGO7c8/source.gif?cid=ecf05e477oe6tozjapmlsxyn6728ngnei725hfunn6pms7s9&rid=source.gif&ct=g',
+  'https://media.giphy.com/media/9JxkPTP3alOykb8PmQ/source.gif?cid=ecf05e47zh5aa4mhdyyvjk45kr31jx4z9h2c2kwvxtl16jul&rid=source.gif&ct=g',
+  'https://media.giphy.com/media/lFNmSjRDN9SiLJ3a9Z/source.gif?cid=ecf05e479a31u1tmbvkpx8gnhzw86afpl9trgylo8b6x7pwf&rid=source.gif&ct=g',
+  'https://media.giphy.com/media/fpdCg5peSEE8tihDOs/source.gif?cid=790b7611bc576f4ecdae30e420e05dbfc8c4f27c63fb9248&rid=source.gif&ct=g',
+  'https://media.giphy.com/media/jjMzVt3jaDfzoKr49R/source.gif?cid=790b761198deaa17248d3a475fecfc490023423ce58ef6c2&rid=source.gif&ct=g',
+  'https://media.giphy.com/media/1gdr0AVrek4Q1fOs3Z/source.gif?cid=790b76112f51b4dd54bc320e48bc242424aa41b48726ebeb&rid=source.gif&ct=g',
+  'https://media.giphy.com/media/auKRHcLuzy6ME/source.gif?cid=ecf05e472uqchn1yrm1tcxrmc44b7k9if1szedot7nwgava6&rid=source.gif&ct=g',
+  'https://media.giphy.com/media/ODcgqrqIeNuewjiqow/source.gif?cid=ecf05e47lin6o6e5urhkrabzqfxvyvqn6ujzaeciuoi9rssw&rid=source.gif&ct=g'
 ]
