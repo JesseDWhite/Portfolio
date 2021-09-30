@@ -5,10 +5,12 @@ import {
   CardContent,
   CardActionArea,
   Grid,
-  Chip
+  Chip,
+  Button
 } from '@mui/material'
 import Work from '../img/Work.jpg';
 import { EXPERIENCECONSTANTS } from '../Constants/ExperienceConstants';
+import Resume from '../doc/Resume - Jesse White.pdf';
 
 const Experience = () => {
   return (
@@ -48,7 +50,23 @@ const Experience = () => {
             }}
           >
             EXPERIENCE
+            <Typography>
+              <a
+                style={{
+                  textDecoration: 'none'
+                }}
+                href={Resume}
+                download='Jesse White'>
+                <Button
+                  color='secondary'
+                  variant='contained'
+                >
+                  Download Resume
+                </Button>
+              </a>
+            </Typography>
           </Typography>
+
         </Grid>
         <Grid
           display='flex'
@@ -69,7 +87,7 @@ const Experience = () => {
                 <Grid
                   md={12}
                   lg={6}
-                  xl={3}
+                  xl={6}
                 >
                   <Card
                     elevation={5}
@@ -148,7 +166,12 @@ const Experience = () => {
                         >
                           {experience.jobDuties.map(duty => {
                             return (
-                              <li>{duty}</li>
+                              <Typography
+                                sx={{
+                                  marginBottom: 1
+                                }}
+                              >{duty}
+                              </Typography>
                             )
                           })}
                         </Typography>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Typography, Card, IconButton } from '@mui/material';
+import { Typography, Card, IconButton, Grid } from '@mui/material';
 import ColorLensTwoToneIcon from '@mui/icons-material/ColorLensTwoTone';
 
 const Intro = (props) => {
@@ -10,82 +10,96 @@ const Intro = (props) => {
     <>
       <Card
         sx={{
-          height: '100vh',
-          width: '100%',
-          backgroundColor: 'rgb(6, 16, 26)'
+          backgroundColor: 'rgb(6, 16, 26)',
+          boxShadow: 'none',
         }}
       >
-        <Typography
-          variant='h2'
-          sx={{
-            position: 'relative',
-            left: 50,
-            top: 120,
-            fontSize: 150,
-            fontWeight: 'bold',
-            color: 'rgb(0,255,255,0%)',
-            WebkitTextStroke: '0.5px aqua',
-            backgroundImage: `url(${background})`,
-            WebkitBackgroundClip: 'text',
-            backgroundClip: 'text',
-            // backgroundSize: 'cover',
-            transition: 'color 0.50s, left 0.50s, -webkit-text-stroke 0.50s',
-            '&: hover': {
-              color: 'rgb(0,255,255,50%)',
-              left: 70,
-              WebkitTextStroke: '0.5px aqua',
-            }
-          }}
+        <Grid
+          lg={6}
         >
-          HI THERE,
-        </Typography>
-        <Typography
-          variant='h1'
-          sx={{
-            position: 'relative',
-            left: 200,
-            top: 120,
-            fontSize: 250,
-            fontWeight: 'bold',
-            color: 'rgb(255,165,0,0%)',
-            WebkitTextStroke: '1.5px orange',
-            backgroundImage: `url(${background})`,
-            WebkitBackgroundClip: 'text',
-            backgroundClip: 'text',
-            // backgroundSize: 'cover',
-            transition: 'color 0.50s, left 0.50s, -webkit-text-stroke 0.50s',
-            '&: hover': {
-              color: 'rgb(255,165,0,50%)',
-              left: 220,
+          <Typography
+            variant='h2'
+            sx={{
+              position: 'relative',
+              left: 50,
+              top: 120,
+              // fontSize: 150,
+              fontSize: '8vw',
+              fontWeight: 'bold',
+              color: 'rgb(0,255,255,0%)',
+              WebkitTextStroke: '0.5px aqua',
+              backgroundImage: `url(${background})`,
+              WebkitBackgroundClip: 'text',
+              backgroundClip: 'text',
+              // backgroundSize: 'cover',
+              transition: 'color 0.50s, left 0.50s, -webkit-text-stroke 0.50s',
+              '&: hover': {
+                color: 'rgb(0,255,255,50%)',
+                left: 70,
+                WebkitTextStroke: '0.5px aqua',
+              }
+            }}
+          >
+            HI THERE,
+          </Typography>
+        </Grid>
+        <Grid
+          lg={12}
+        >
+          <Typography
+            variant='h1'
+            sx={{
+              position: 'relative',
+              left: 200,
+              top: 120,
+              // fontSize: 250,
+              fontSize: '15vw',
+              fontWeight: 'bold',
+              color: 'rgb(255,165,0,0%)',
               WebkitTextStroke: '1.5px orange',
-            }
-          }}
+              backgroundImage: `url(${background})`,
+              WebkitBackgroundClip: 'text',
+              backgroundClip: 'text',
+              // backgroundSize: 'cover',
+              transition: 'color 0.50s, left 0.50s, -webkit-text-stroke 0.50s',
+              '&: hover': {
+                color: 'rgb(255,165,0,50%)',
+                left: 220,
+                WebkitTextStroke: '1.5px orange',
+              }
+            }}
+          >
+            I'M JESSE
+          </Typography>
+        </Grid>
+        <Grid
+          lg={12}
         >
-          I'M JESSE
-        </Typography>
-        <Typography
-          variant='h3'
-          sx={{
-            position: 'relative',
-            left: 90,
-            top: 120,
-            fontSize: 80,
-            fontWeight: 'bold',
-            color: 'rgb(0,255,255,0%)',
-            WebkitTextStroke: '0.5px aqua',
-            backgroundImage: `url(${background})`,
-            WebkitBackgroundClip: 'text',
-            backgroundClip: 'text',
-            // backgroundSize: 'cover',
-            transition: 'color 0.50s, left 0.50s, -webkit-text-stroke 0.50s',
-            '&: hover': {
-              color: 'rgb(0,255,255,50%)',
-              left: 100,
+          <Typography
+            variant='h3'
+            sx={{
+              position: 'relative',
+              left: 90,
+              top: 120,
+              // fontSize: 80,
+              fontSize: '5vw',
+              fontWeight: 'bold',
+              color: 'rgb(0,255,255,0%)',
               WebkitTextStroke: '0.5px aqua',
-            }
-          }}>
-          Full - Stack Developer
-        </Typography>
+              backgroundImage: `url(${background})`,
+              WebkitBackgroundClip: 'text',
+              backgroundClip: 'text',
+              // backgroundSize: 'cover',
+              transition: 'color 0.50s, left 0.50s, -webkit-text-stroke 0.50s',
+              '&: hover': {
+                color: 'rgb(0,255,255,50%)',
+                left: 100,
+                WebkitTextStroke: '0.5px aqua',
+              }
+            }}>
+            Full - Stack Developer
+          </Typography>
+        </Grid>
         <IconButton
           variant='contained'
           sx={{

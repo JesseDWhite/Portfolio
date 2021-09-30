@@ -1,5 +1,9 @@
 import React from 'react';
-import { Typography, Card, Grid } from '@mui/material'
+import {
+  Typography,
+  Card,
+  Grid,
+} from '@mui/material'
 import Forest from '../img/Forest.jpg';
 
 const About = () => {
@@ -23,7 +27,7 @@ const About = () => {
               width: '100%',
               height: '60vh',
               objectFit: 'cover',
-              objectPosition: '12% 12%'
+              objectPosition: '12% 20%'
             }}
             alt='Jesse and Katherine in the forest'
           />
@@ -61,7 +65,7 @@ const About = () => {
               marginBottom: 5
             }}
           >
-            Growing up, whenever I was asked what I wanted to be when I grew up, I always said, “to be either a scientist and an inventor”. Now those are two extremely vague job titles for a 10-year-old to wrap their head around, but I was insistent on that. I did not know what I would specialize in as a scientist, or even any great ideas to become the inventor of. Once I got older and more experience in life, I assumed that both of those aspirations were out of touch and un-achievable. However, I was given an opportunity to act as Director of Operations for a small to medium size business in 2017. This helped me realize that my original aspirations were not too off base and that I just needed to define what it meant to be a scientist and an inventor.
+            Growing up, whenever I was asked what I wanted to be when I grew up, I always said, 'to be either a scientist and an inventor'. Now those are two extremely vague job titles for a 10-year-old to wrap their head around, but I was insistent on that. I did not know what I would specialize in as a scientist, or even any great ideas to become the inventor of. Once I got older and had more experience in life, I assumed that both of those aspirations were out of touch and unachievable. However, I was given an opportunity to act as Director of Operations for a small to medium-size business in 2017. This helped me realize that my original aspirations were not too off base and that I just needed to define what it meant to be a scientist and an inventor.
           </Typography>
           <Typography
             sx={{
@@ -69,7 +73,7 @@ const About = () => {
               marginBottom: 5
             }}
           >
-            Through my experience as a Director of Operations, I learned what it truly meant to run a business and the subtle intricacies of staff dynamic, workplace culture, and the importance of tech in any field. My very first task at this new position was to get everything they were currently using for workflow to a digital form. The business at the time did not have much money since all profits were going back into base operating functions, so these solutions needed to be made from scratch and in-house. After a lot of trial and error I was able to piece together multiple web-based applications that digitized all timesheets, employee information and tracking, job orders and general workflow, and much more. Through this success, I realized that I was not too far off my childhood goal of inventing and becoming a scientist.
+            Through my experience as a Director of Operations, I learned what it truly meant to run a business and the subtle intricacies of staff dynamics, workplace culture, and the importance of tech in any field. My very first task at this new position was to get everything they were currently using for the workflow to a digital form. The business at the time did not have much money since all profits were going back into base operating functions, so these solutions needed to be made from scratch and in-house. After a lot of trial and error, I was able to piece together multiple web-based applications that digitized all timesheets, employee information and tracking, job orders and general workflow, and much more. Through this success, I realized that I was not too far off my childhood goal of inventing and becoming a scientist.
           </Typography>
           <Typography
             sx={{
@@ -85,7 +89,7 @@ const About = () => {
               marginBottom: 5
             }}
           >
-            My biggest take away so far, is that your childhood aspirations may not go away, but simply show up in different ways. I was lucky enough to find mine through business operations and coding. I love being able to put some text into a code editor and see it come to life on a computer, phone, or even a TV. It feels like magic every time I do it. I am currently learning HTML, CSS, JavaScript, C#, React, and .NET and am sure that my love of creating will continue to grow through coding and web-development.
+            My biggest takeaway so far is that your childhood aspirations may not go away, but simply show up in different ways. I was lucky enough to find mine through business operations and coding. I love being able to put some text into a code editor and see it come to life. It feels like magic every time I do it.
           </Typography>
         </Card>
       </Card>

@@ -127,13 +127,19 @@ const Projects = () => {
                                   avatar={<Avatar>{language[0]}</Avatar>}
                                   sx={{
                                     marginRight: 1,
-                                    marginBottom: 1
+                                    marginBottom: 1,
                                   }}
                                 />
                               )
                             })}
                           </Typography>
-                          <Typography variant="body2">
+                          <hr />
+                          <Typography
+                            variant="body2"
+                            sx={{
+                              fontSize: '15px'
+                            }}
+                          >
                             {project.description}
                           </Typography>
                         </CardContent>

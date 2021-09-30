@@ -30,49 +30,21 @@ function App() {
 
   return (
     <>
-      {/* <Router>
-        <Switch> */}
-      {/* <Grid
-        container
-      > */}
-      {/* <Route path='/'> */}
-      {/* <Grid
-          sx={{
-            // width: '100vw'
-          }}
-        > */}
       <Contact />
-      <Intro
-        background={background}
-        theme={theme}
-        changeBackgroundImage={changeBackgroundImage}
-      />
-      {/* </Grid> */}
-      {/* </Route>
-            <Route path='/projects'> */}
-      {/* <Grid> */}
+      <Grid
+        sx={{
+          minHeight: '100vh'
+        }}
+      >
+        <Intro
+          background={background}
+          theme={theme}
+          changeBackgroundImage={changeBackgroundImage}
+        />
+      </Grid>
       <Projects />
-      {/* </Grid> */}
-      {/* </Route> */}
-      {/* <Grid
-          sx={{
-            width: '100vw'
-          }}> */}
-      {/* <Route path='/experience'> */}
       <Experience />
-      {/* </Route> */}
-      {/* </Grid>
-        <Grid
-          sx={{
-            height: '100vh'
-          }}> */}
-      {/* <Route path='/about'> */}
       <About />
-      {/* </Route> */}
-      {/* </Grid>
-      </Grid> */}
-      {/* </Switch>
-      </Router> */}
     </>
   );
 }
