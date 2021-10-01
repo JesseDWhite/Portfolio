@@ -15,3 +15,7 @@
 .fadeIn {
   opacity: 1;
 }
+
+#nameInput, #messageInput, #emailInput {
+  color: white;
+}

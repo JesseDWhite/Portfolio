@@ -3,13 +3,35 @@ import {
   TextField,
   Button,
 } from '@mui/material';
+import emailjs from 'emailjs-com';
+import { alpha, styled } from '@mui/material/styles';
 
 const initialValues = {
   name: '',
-  organization: '',
+  email: '',
   date: new Date('2014-08-18T21:11:54'),
   message: '',
 }
+
+const StyledTextField = styled(TextField)({
+  '& label': {
+    color: 'white',
+  },
+  '& label.Mui-focused': {
+    color: 'aqua',
+  },
+  '& .MuiOutlinedInput-root': {
+    '& fieldset': {
+      borderColor: 'white',
+    },
+    '&:hover fieldset': {
+      borderColor: 'orange',
+    },
+    '&.Mui-focused fieldset': {
+      borderColor: 'aqua',
+    },
+  },
+})
 
 const Form = () => {
 
@@ -23,18 +45,29 @@ const Form = () => {
     });
   };
 
-  const handleSubmission = (event) => {
-    event.preventDefault();
-    console.log(formValues);
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm('service_xls8lup', 'template_28bjl2k', e.target, 'user_7NqP1g7sWwPQ6DSyyQyFP')
+      .then((result) => {
+        console.log(result)
+        setFormValues(initialValues);
+      },
+        (error) => {
+          console.log(error.text)
+        });
   }
 
   return (
     <>
-      <form onSubmit={handleSubmission}>
-        <TextField
-          sx={{
-            width: '100%'
-          }}
+      <form
+        onSubmit={sendEmail}
+        id='contactForm'
+      >
+        <StyledTextField
+          fullWidth
+          color='warning'
+          variant='outlined'
           id='nameInput'
           name='name'
           label='Full Name'
@@ -42,27 +75,31 @@ const Form = () => {
           value={formValues.name}
           onChange={handleInputChange}
         />
-        <TextField
+        <StyledTextField
+          fullWidth
           sx={{
-            width: '100%',
             marginTop: 3
           }}
-          id='organizationInput'
-          name='organization'
-          label='Organization'
-          type='text'
-          value={formValues.organization}
+          color='warning'
+          id='emailInput'
+          name='email'
+          label='Email Address'
+          type='email'
+          value={formValues.email}
           onChange={handleInputChange}
         />
-        <TextField
+        <StyledTextField
+          fullWidth
           sx={{
-            width: '100%',
             marginTop: 3
           }}
+          color='warning'
           id='messageInput'
           name='message'
           label='Message'
           type='text'
+          multiline
+          rows={6}
           value={formValues.message}
           onChange={handleInputChange}
         />
