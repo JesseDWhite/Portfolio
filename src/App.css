@@ -6,3 +6,12 @@
   height: 100%;
   color: white;
 }
+
+.hiThere {
+  opacity: 0;
+  transition: 2s opacity;
+}
+
+.fadeIn {
+  opacity: 1;
+}

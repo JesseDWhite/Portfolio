@@ -1,10 +1,19 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Typography, Card, IconButton, Grid } from '@mui/material';
 import ColorLensTwoToneIcon from '@mui/icons-material/ColorLensTwoTone';
 
 const Intro = (props) => {
 
   const { background, changeBackgroundImage } = props
+
+  // useEffect(() => {
+  //   let element = document.querySelector('.hiThere');
+  //   let classes = element.classList;
+  //   classes.remove('hiThere')
+  //   classes.add('fadeIn');
+  //   console.log(classes)
+  //   console.log(element)
+  // }, [])
 
   return (
     <>
@@ -19,6 +28,7 @@ const Intro = (props) => {
         >
           <Typography
             variant='h2'
+            // className='hiThere'
             sx={{
               position: 'relative',
               left: 50,

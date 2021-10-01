@@ -1,9 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import {
-  HashRouter as Router,
-  Route,
-  Switch
-} from 'react-router-dom';
 import './App.css';
 import Intro from './Components/Intro'
 import Projects from './Components/Projects';

@@ -50,12 +50,12 @@ const Projects = () => {
               left: '50%',
               transform: 'translate(-50%, -50%)',
               fontWeight: 'bold',
-              fontSize: '100px',
+              fontSize: 100,
               textShadow: 'rgb(10,25,41) -8px 0px 0px',
-              color: 'rgb(77,72,152)',
+              color: 'lightgray'
             }}
           >
-            PROJECTS OF NOTE
+            PORTFOLIO
           </Typography>
         </Grid>
         <Grid

@@ -7,6 +7,14 @@ import Pizzaria from '../img/Pizzaria.png';
 
 export const PROJECTS = [
   {
+    name: 'VALIDATE',
+    techStack: ['JavaScript', 'Node.js', 'React', 'Formik', 'AWS', 'Amplify', 'DynamoDB', 'Material Ui', 'GraphQL'],
+    description: 'VALIDATE will give small companies and startups the ability to create sophisticated forms that can generate market research for ideas, branding, products, and anything else the user might need.',
+    link: 'https://github.com/Indev-Hub/VALIDATEAlpha',
+    repo: 'https://github.com/Indev-Hub/VALIDATEAlpha',
+    image: Validate
+  },
+  {
     name: 'No More Cover Letter',
     techStack: ['HTML', 'CSS', 'JavaScript', 'Node.js', 'Bootstrap', 'React', 'Redux', 'Firebase'],
     description: 'This application was meant to streamline and de-mistify the process of writing a cover letter for a job application. A good cover letter can really set you apart from other candidates in the applicant pool and a great way to spice up your cover letter, is to include keywords/power words from the job posting into your cover letter. You can manually do this by scanning the job posting and writing them down as you go, or you can use this application to find them for you. Once this system has identified them, include them in your cover letter, upload it into this application and it will give you a letter grade for how many of those words are a match and if you should apply!',
@@ -37,14 +45,6 @@ export const PROJECTS = [
     link: 'https://github.com/JesseDWhite/AnimalShelter.Solution',
     repo: 'https://github.com/JesseDWhite/AnimalShelter.Solution',
     image: Cat
-  },
-  {
-    name: 'VALIDATE',
-    techStack: ['JavaScript', 'Node.js', 'React', 'Formik', 'AWS', 'Amplify', 'DynamoDB', 'Material Ui', 'GraphQL'],
-    description: 'VALIDATE will give small companies and startups the ability to create sophisticated forms that can generate market research for ideas, branding, products, and anything else the user might need.',
-    link: 'https://github.com/Indev-Hub/VALIDATEAlpha',
-    repo: 'https://github.com/Indev-Hub/VALIDATEAlpha',
-    image: Validate
   },
   {
     name: 'Cheesus Crust Pizzeria',

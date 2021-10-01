@@ -3,8 +3,10 @@ import {
   Typography,
   Card,
   Grid,
+  CardMedia
 } from '@mui/material'
 import Forest from '../img/Forest.jpg';
+import Form from './Form';
 
 const About = () => {
   return (
@@ -39,59 +41,88 @@ const About = () => {
               left: '50%',
               transform: 'translate(-50%, -50%)',
               fontWeight: 'bold',
-              fontSize: '100px',
+              fontSize: 100,
               textShadow: 'rgb(10,25,41) -8px 0px 0px',
-              color: 'rgb(77,72,152)',
+              // color: 'rgb(77,72,152)',
+              color: 'lightgray'
             }}
           >
             ABOUT ME
           </Typography>
         </Grid>
-        <Card
-          sx={{
-            position: 'relative',
-            bottom: 0,
-            margin: 10,
-            padding: 3,
-            borderRadius: 5,
-            backgroundColor: 'rgb(23,58,94)',
-            color: 'white',
-            transition: 'bottom 0.50s, boxShadow 0.50s',
-          }}
+        <Grid
+          container
+          direction='row'
+          alignItems="flex-start"
+          justifyContent="flex-start"
         >
-          <Typography
-            sx={{
-              fontSize: '20px',
-              marginBottom: 5
-            }}
+          <Grid
+            xl={6}
+            lg={12}
           >
-            Growing up, whenever I was asked what I wanted to be when I grew up, I always said, 'to be either a scientist and an inventor'. Now those are two extremely vague job titles for a 10-year-old to wrap their head around, but I was insistent on that. I did not know what I would specialize in as a scientist, or even any great ideas to become the inventor of. Once I got older and had more experience in life, I assumed that both of those aspirations were out of touch and unachievable. However, I was given an opportunity to act as Director of Operations for a small to medium-size business in 2017. This helped me realize that my original aspirations were not too off base and that I just needed to define what it meant to be a scientist and an inventor.
-          </Typography>
-          <Typography
-            sx={{
-              fontSize: '20px',
-              marginBottom: 5
-            }}
+            <Card
+              sx={{
+                position: 'relative',
+                bottom: 0,
+                margin: 10,
+                padding: 3,
+                borderRadius: 5,
+                backgroundColor: 'rgb(23,58,94)',
+                color: 'white',
+                transition: 'bottom 0.50s, boxShadow 0.50s',
+              }}
+            >
+              <Typography
+                sx={{
+                  fontSize: '18px',
+                  marginBottom: 5
+                }}
+              >
+                I graduated from a 27-week program with Epicodus with an emphasis in C# and .NET framework, as well as the standard HTML, JavaScript, and CSS. The program taught me the benefits of programming and the best practices for the space. It was very early on that I discovered a passion for UI design. I enjoy the challenge of determining how to offer the richest experience to the end user by the way of tested implementation through test driven development practices. It has been my time at VALIDATE while utilizing the React framework that really forced me to take on the role of the end user to design and implement changes on an interface to offer the highest quality experience.
+              </Typography>
+              <Typography
+                sx={{
+                  fontSize: '18px',
+                  marginBottom: 5
+                }}
+              >
+                During Epicodus’s pair-programming curriculum, I was able to work on several collaborative team projects, which gave me some insight into how much of the tech industry relies on whole-team operations. In fact,  I collaborated on a project with four other team members to provide a web-based application that gives the end user real-time information on our National Parks. While my personal responsibility was to chain a weather API query to the National Parks Service Database for local weather information per park, I also maintained constant remote communication with the members of my team to ensure each piece of the application fit together for full functionality. The program utilized JavaScript as a front-end and NodeJS as a back-end to make API calls through Open Weather and upon completion was merged into the main branch of the project. This project bolstered my ability to effectively communicate the minimum viable product to a team, test my implementation with consistent documentation, and navigate the GitHub workflow.
+              </Typography>
+              <Typography
+                sx={{
+                  fontSize: '18px',
+                }}
+              >
+                Prior to completing my education in programming, I was a Director of Operations for a small business in downtown Portland. I held this position for nearly five years and became a catalyst for the business's growth to the sustainable model it is today. While working there I created a database and tracking system for employee and customer information, current and outgoing job orders, daily timesheets for billable hours, and a cradle to grave tracking system for medical waste transport and disposal. I lead a team of 50 members, and I personally worked with and trained them daily. One of my biggest areas of growth during my tenure was learning to meet people where they are to foster growth. I worked with a highly vulnerable community and a staff that required coaching in respecting the delicacy of every interaction with local people. I infused the value of fostering strong interpersonal skills into the company, which allowed us to offer our staff the resources and education they needed to be successful in the field.
+              </Typography>
+            </Card>
+          </Grid>
+          <Grid
+            xl={6}
+            lg={12}
           >
-            Through my experience as a Director of Operations, I learned what it truly meant to run a business and the subtle intricacies of staff dynamics, workplace culture, and the importance of tech in any field. My very first task at this new position was to get everything they were currently using for the workflow to a digital form. The business at the time did not have much money since all profits were going back into base operating functions, so these solutions needed to be made from scratch and in-house. After a lot of trial and error, I was able to piece together multiple web-based applications that digitized all timesheets, employee information and tracking, job orders and general workflow, and much more. Through this success, I realized that I was not too far off my childhood goal of inventing and becoming a scientist.
-          </Typography>
-          <Typography
-            sx={{
-              fontSize: '20px',
-              marginBottom: 5
-            }}
-          >
-            I was later given an opportunity to leave my job and pursue what I found along the way; coding and web-based application development. Coding allowed me to take an idea that I had and put it into a physical form, even if it is just a basic calculator. This fulfilled my desire to invent. It also allowed me to try different ideas and theories for applying an idea to a through trial and error. This then fulfilled my aspiration of becoming a scientist even if not directly.
-          </Typography>
-          <Typography
-            sx={{
-              fontSize: '20px',
-              marginBottom: 5
-            }}
-          >
-            My biggest takeaway so far is that your childhood aspirations may not go away, but simply show up in different ways. I was lucky enough to find mine through business operations and coding. I love being able to put some text into a code editor and see it come to life. It feels like magic every time I do it.
-          </Typography>
-        </Card>
+            <Card
+              sx={{
+                position: 'relative',
+                bottom: 0,
+                margin: 10,
+                borderRadius: 5,
+                backgroundColor: 'rgb(23,58,94)',
+                color: 'white',
+                transition: 'bottom 0.50s, boxShadow 0.50s',
+              }}
+            >
+              <Typography
+                sx={{
+                  fontSize: '18px',
+                  padding: 3
+                }}
+              >
+                <Form />
+              </Typography>
+            </Card>
+          </Grid>
+        </Grid>
       </Card>
     </>
   )
