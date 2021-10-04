@@ -15,7 +15,7 @@ import {
 } from '@mui/material';
 import { PROJECTS } from '../Constants/ProjectsConstants';
 import { GitHub } from '@mui/icons-material';
-import Programming from '../img/Programming.jpg'
+import Programming from '../img/Programming.jpg';
 
 const Projects = () => {
   return (
@@ -107,7 +107,7 @@ const Projects = () => {
                           component="img"
                           height="250"
                           image={project.image}
-                          alt={project.name}
+                          alt={`${project.name} splash page`}
                         />
                         <CardContent
                           sx={{

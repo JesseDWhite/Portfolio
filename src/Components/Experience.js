@@ -46,7 +46,6 @@ const Experience = () => {
               fontWeight: 'bold',
               fontSize: 100,
               textShadow: 'rgb(10,25,41) -8px 0px 0px',
-              // color: 'rgb(77,72,152)',
               color: 'lightgray'
             }}
           >
@@ -80,7 +79,7 @@ const Experience = () => {
           <Grid
             container
             direction='row'
-            alignItems="center"
+            alignItems="flex-start"
             justifyContent="flex-start"
           >
             {EXPERIENCECONSTANTS.map(experience => {

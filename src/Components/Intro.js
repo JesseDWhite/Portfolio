@@ -1,19 +1,10 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Typography, Card, IconButton, Grid } from '@mui/material';
 import ColorLensTwoToneIcon from '@mui/icons-material/ColorLensTwoTone';
 
 const Intro = (props) => {
 
   const { background, changeBackgroundImage } = props
-
-  // useEffect(() => {
-  //   let element = document.querySelector('.hiThere');
-  //   let classes = element.classList;
-  //   classes.remove('hiThere')
-  //   classes.add('fadeIn');
-  //   console.log(classes)
-  //   console.log(element)
-  // }, [])
 
   return (
     <>
@@ -28,12 +19,10 @@ const Intro = (props) => {
         >
           <Typography
             variant='h2'
-            // className='hiThere'
             sx={{
               position: 'relative',
               left: 50,
               top: 120,
-              // fontSize: 150,
               fontSize: '8vw',
               fontWeight: 'bold',
               color: 'rgb(0,255,255,0%)',
@@ -41,7 +30,6 @@ const Intro = (props) => {
               backgroundImage: `url(${background})`,
               WebkitBackgroundClip: 'text',
               backgroundClip: 'text',
-              // backgroundSize: 'cover',
               transition: 'color 0.50s, left 0.50s, -webkit-text-stroke 0.50s',
               '&: hover': {
                 color: 'rgb(0,255,255,50%)',
@@ -62,7 +50,6 @@ const Intro = (props) => {
               position: 'relative',
               left: 200,
               top: 120,
-              // fontSize: 250,
               fontSize: '15vw',
               fontWeight: 'bold',
               color: 'rgb(255,165,0,0%)',
@@ -70,7 +57,6 @@ const Intro = (props) => {
               backgroundImage: `url(${background})`,
               WebkitBackgroundClip: 'text',
               backgroundClip: 'text',
-              // backgroundSize: 'cover',
               transition: 'color 0.50s, left 0.50s, -webkit-text-stroke 0.50s',
               '&: hover': {
                 color: 'rgb(255,165,0,50%)',
@@ -91,7 +77,6 @@ const Intro = (props) => {
               position: 'relative',
               left: 90,
               top: 120,
-              // fontSize: 80,
               fontSize: '5vw',
               fontWeight: 'bold',
               color: 'rgb(0,255,255,0%)',
@@ -99,7 +84,6 @@ const Intro = (props) => {
               backgroundImage: `url(${background})`,
               WebkitBackgroundClip: 'text',
               backgroundClip: 'text',
-              // backgroundSize: 'cover',
               transition: 'color 0.50s, left 0.50s, -webkit-text-stroke 0.50s',
               '&: hover': {
                 color: 'rgb(0,255,255,50%)',
@@ -114,7 +98,8 @@ const Intro = (props) => {
           variant='contained'
           sx={{
             marginLeft: 12,
-            marginTop: 15
+            marginTop: 15,
+            marginBottom: 15
           }}
           onClick={() => changeBackgroundImage()}>
           <ColorLensTwoToneIcon

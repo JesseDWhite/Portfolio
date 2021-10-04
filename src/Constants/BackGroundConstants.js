@@ -19,4 +19,4 @@ export const BACKGROUNDGIFS = [
   'https://media.giphy.com/media/1gdr0AVrek4Q1fOs3Z/source.gif?cid=790b76112f51b4dd54bc320e48bc242424aa41b48726ebeb&rid=source.gif&ct=g',
   'https://media.giphy.com/media/auKRHcLuzy6ME/source.gif?cid=ecf05e472uqchn1yrm1tcxrmc44b7k9if1szedot7nwgava6&rid=source.gif&ct=g',
   'https://media.giphy.com/media/ODcgqrqIeNuewjiqow/source.gif?cid=ecf05e47lin6o6e5urhkrabzqfxvyvqn6ujzaeciuoi9rssw&rid=source.gif&ct=g'
-]
+];

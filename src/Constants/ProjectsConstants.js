@@ -32,7 +32,7 @@ export const PROJECTS = [
   },
   {
     name: 'Super Galactic Age Calculator',
-    techStack: ['HTML', 'CSS', 'JavaScript', 'Node.js', 'Bootstrap'],
+    techStack: ['HTML', 'CSS', 'JavaScript', 'Node.js', 'Bootstrap', 'TDD'],
     description: 'Use this application to see how old you would be on other planets! Put your name and current age into the form and you will see your answer on the right side of the page. You will also see what the average life expectancy is on that planet and how you compare.',
     link: 'https://nostalgic-joliot-c01fcb.netlify.app/',
     repo: 'https://github.com/JesseDWhite/super-galactic-age-calculator',
@@ -54,4 +54,4 @@ export const PROJECTS = [
     repo: 'https://github.com/JesseDWhite/pizza-parlor',
     image: Pizzaria
   },
-]
+];
