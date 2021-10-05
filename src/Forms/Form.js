@@ -140,7 +140,7 @@ const Form = () => {
               <div
                 class="g-recaptcha"
                 data-sitekey="6LeI0q8cAAAAAGIry2jEnnREMF3ek6GMRbKZkvwP"
-                data-theme="dark-light"
+                data-theme="dark"
                 style={{
                   marginTop: 20,
                   marginBottom: 20
