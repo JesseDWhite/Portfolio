@@ -7,6 +7,7 @@ import {
 } from '@mui/material';
 import emailjs from 'emailjs-com';
 import { styled } from '@mui/material/styles';
+import { red } from '@mui/material/colors';
 
 const initialValues = {
   name: '',
@@ -95,6 +96,7 @@ const Form = () => {
             <form
               onSubmit={sendEmail}
               id='contactForm'
+              method='POST'
             >
               <StyledTextField
                 fullWidth
@@ -135,16 +137,26 @@ const Form = () => {
                 value={formValues.message}
                 onChange={handleInputChange}
               />
+              <div
+                class="g-recaptcha"
+                data-sitekey="6LeI0q8cAAAAAGIry2jEnnREMF3ek6GMRbKZkvwP"
+                data-theme="dark-light"
+                style={{
+                  marginTop: 20,
+                  marginBottom: 20
+                }}
+              >
+              </div>
               <Button
                 sx={{
                   width: '100%',
-                  marginTop: 5
                 }}
                 type='submit'
                 variant='contained'
                 color='secondary'>
                 Submit
               </Button>
+
             </form>
           }
         </Typography>
