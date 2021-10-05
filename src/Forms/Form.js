@@ -7,7 +7,6 @@ import {
 } from '@mui/material';
 import emailjs from 'emailjs-com';
 import { styled } from '@mui/material/styles';
-import { red } from '@mui/material/colors';
 
 const initialValues = {
   name: '',
