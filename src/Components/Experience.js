@@ -160,7 +160,7 @@ const Experience = () => {
                         <Typography
                           variant="body2"
                           sx={{
-                            textAlign: 'center',
+                            // textAlign: 'center',
                             fontSize: 15
                           }}
                         >
