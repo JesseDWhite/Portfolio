@@ -15,6 +15,7 @@ const About = () => {
         sx={{
           height: '100%',
           backgroundColor: 'rgb(10,25,41)',
+          paddingBottom: 5
         }}
       >
         <Grid
@@ -60,6 +61,7 @@ const About = () => {
             lg={12}
           >
             <Card
+              elevation={5}
               sx={{
                 position: 'relative',
                 bottom: 0,
@@ -78,7 +80,10 @@ const About = () => {
                   <Typography
                     sx={{
                       fontSize: '18px',
-                      marginBottom: 5
+                      marginBottom: 5,
+                      '&: last-child': {
+                        marginBottom: 0
+                      }
                     }}
                   >
                     {paragraph.bio}
