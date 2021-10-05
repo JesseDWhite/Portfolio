@@ -53,7 +53,6 @@ const Form = () => {
 
     emailjs.sendForm('service_xls8lup', 'template_28bjl2k', e.target, 'user_7NqP1g7sWwPQ6DSyyQyFP')
       .then((result) => {
-        console.log(result)
         setFormValues(initialValues);
         setFormSubmit(true);
       },
