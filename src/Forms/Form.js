@@ -141,7 +141,7 @@ const Form = () => {
                 }}
                 type='submit'
                 variant='contained'
-                color='success'>
+                color='secondary'>
                 Submit
               </Button>
             </form>
