@@ -47,8 +47,8 @@ const Contact = (props) => {
         ariaLabel="Contact Information"
         sx={{
           position: 'fixed',
-          top: viewPort < 500 ? 25 : 80,
-          right: viewPort < 500 ? 25 : 80,
+          top: viewPort < 600 ? 25 : 80,
+          right: viewPort < 600 ? 25 : 80,
           transition: 'right 0.50s',
           '&: hover': {
             right: 90,

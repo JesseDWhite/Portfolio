@@ -53,7 +53,7 @@ const Projects = (props) => {
               left: '50%',
               transform: 'translate(-50%, -50%)',
               fontWeight: 'bold',
-              fontSize: '12vw',
+              fontSize: viewPort < 600 ? 60 : 100,
               textShadow: 'rgb(10,25,41) -8px 0px 0px',
               color: 'lightgray'
             }}
@@ -83,9 +83,9 @@ const Projects = (props) => {
                     sx={{
                       position: 'relative',
                       bottom: 0,
-                      margin: viewPort < 500 ? 1 : 10,
-                      marginBottom: viewPort < 500 ? 5 : 'none',
-                      marginTop: viewPort < 500 ? 5 : 'none',
+                      margin: viewPort < 600 ? 1 : 10,
+                      marginBottom: viewPort < 600 ? 5 : 'none',
+                      marginTop: viewPort < 600 ? 5 : 'none',
                       borderRadius: 5,
                       backgroundColor: 'rgb(23,58,94)',
                       color: 'white',

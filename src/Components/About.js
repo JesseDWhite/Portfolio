@@ -68,9 +68,9 @@ const About = (props) => {
               sx={{
                 position: 'relative',
                 bottom: 0,
-                marginLeft: viewPort < 500 ? 1 : 10,
-                marginTop: viewPort < 500 ? 5 : 10,
-                marginRight: viewPort < 500 ? 1 : 10,
+                marginLeft: viewPort < 600 ? 1 : 10,
+                marginTop: viewPort < 600 ? 5 : 10,
+                marginRight: viewPort < 600 ? 1 : 10,
                 padding: 3,
                 borderRadius: 5,
                 backgroundColor: 'rgb(23,58,94)',
