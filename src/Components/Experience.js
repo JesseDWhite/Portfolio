@@ -12,7 +12,10 @@ import Work from '../img/Work.jpg';
 import { EXPERIENCECONSTANTS } from '../Constants/ExperienceConstants';
 import Resume from '../doc/Resume - Jesse White.pdf';
 
-const Experience = () => {
+const Experience = (props) => {
+
+  const { viewPort } = props;
+
   return (
     <>
       <Card
@@ -94,7 +97,9 @@ const Experience = () => {
                     sx={{
                       position: 'relative',
                       bottom: 0,
-                      margin: 10,
+                      margin: viewPort < 500 ? 1 : 10,
+                      marginBottom: viewPort < 500 ? 5 : 'none',
+                      marginTop: viewPort < 500 ? 5 : 'none',
                       borderRadius: 5,
                       backgroundColor: 'rgb(23,58,94)',
                       color: 'white',
@@ -160,7 +165,6 @@ const Experience = () => {
                         <Typography
                           variant="body2"
                           sx={{
-                            // textAlign: 'center',
                             fontSize: 15
                           }}
                         >

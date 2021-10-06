@@ -8,7 +8,10 @@ import Forest from '../img/Forest.jpg';
 import Form from '../Forms/Form';
 import { ABOUTCONSTANTS } from '../Constants/AboutConstants';
 
-const About = () => {
+const About = (props) => {
+
+  const { viewPort } = props;
+
   return (
     <>
       <Card
@@ -65,9 +68,9 @@ const About = () => {
               sx={{
                 position: 'relative',
                 bottom: 0,
-                marginLeft: 10,
-                marginTop: 10,
-                marginRight: 10,
+                marginLeft: viewPort < 500 ? 1 : 10,
+                marginTop: viewPort < 500 ? 5 : 10,
+                marginRight: viewPort < 500 ? 1 : 10,
                 padding: 3,
                 borderRadius: 5,
                 backgroundColor: 'rgb(23,58,94)',
@@ -96,7 +99,9 @@ const About = () => {
             xl={6}
             lg={12}
           >
-            <Form />
+            <Form
+              viewPort={viewPort}
+            />
           </Grid>
         </Grid>
       </Card>

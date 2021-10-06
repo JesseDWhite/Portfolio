@@ -9,7 +9,9 @@ import {
 } from '@mui/icons-material';
 import HeadShot from '../img/HeadShot.jpg';
 
-const Contact = () => {
+const Contact = (props) => {
+
+  const { viewPort } = props;
 
   const actions = [
     {
@@ -45,8 +47,8 @@ const Contact = () => {
         ariaLabel="Contact Information"
         sx={{
           position: 'fixed',
-          top: 80,
-          right: 80,
+          top: viewPort < 500 ? 25 : 80,
+          right: viewPort < 500 ? 25 : 80,
           transition: 'right 0.50s',
           '&: hover': {
             right: 90,

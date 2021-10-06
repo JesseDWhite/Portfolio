@@ -21,8 +21,8 @@ const Intro = (props) => {
             variant='h2'
             sx={{
               position: 'relative',
-              left: 50,
-              top: 120,
+              left: '10vw',
+              top: '20vh',
               fontSize: '8vw',
               fontWeight: 'bold',
               color: 'rgb(0,255,255,0%)',
@@ -48,9 +48,9 @@ const Intro = (props) => {
             variant='h1'
             sx={{
               position: 'relative',
-              left: 200,
-              top: 120,
-              fontSize: '15vw',
+              left: '10vw',
+              top: '20vh',
+              fontSize: '10.417rem',
               fontWeight: 'bold',
               color: 'rgb(255,165,0,0%)',
               WebkitTextStroke: '1.5px orange',
@@ -75,8 +75,8 @@ const Intro = (props) => {
             variant='h3'
             sx={{
               position: 'relative',
-              left: 90,
-              top: 120,
+              left: '10vw',
+              top: '20vh',
               fontSize: '5vw',
               fontWeight: 'bold',
               color: 'rgb(0,255,255,0%)',
@@ -106,8 +106,11 @@ const Intro = (props) => {
             color='primary'
             aria-label="change background image"
             sx={{
+              position: 'relative',
+              top: '20vh',
+              left: '10vw',
               opacity: '50%',
-              fontSize: '50px',
+              fontSize: '10%',
               transition: 'color 0.25s, opacity 0.25s',
               '&: hover': {
                 color: 'orange',
