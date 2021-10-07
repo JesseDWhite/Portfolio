@@ -4,7 +4,7 @@ import ColorLensTwoToneIcon from '@mui/icons-material/ColorLensTwoTone';
 
 const Intro = (props) => {
 
-  const { background, changeBackgroundImage } = props
+  const { background, changeBackgroundImage, viewPort } = props
 
   return (
     <>
@@ -21,9 +21,9 @@ const Intro = (props) => {
             variant='h2'
             sx={{
               position: 'relative',
-              left: '10vw',
-              top: '20vh',
-              fontSize: '8vw',
+              left: viewPort < 800 ? 10 : 50,
+              top: viewPort < 800 ? 125 : 120,
+              fontSize: viewPort < 800 ? '20vw' : '8vw',
               fontWeight: 'bold',
               color: 'rgb(0,255,255,0%)',
               WebkitTextStroke: '0.5px aqua',
@@ -48,9 +48,9 @@ const Intro = (props) => {
             variant='h1'
             sx={{
               position: 'relative',
-              left: '10vw',
-              top: '20vh',
-              fontSize: '10.417rem',
+              left: viewPort < 800 ? 10 : 200,
+              top: viewPort < 800 ? 190 : 120,
+              fontSize: viewPort < 800 ? '20vw' : '15vw',
               fontWeight: 'bold',
               color: 'rgb(255,165,0,0%)',
               WebkitTextStroke: '1.5px orange',
@@ -75,9 +75,9 @@ const Intro = (props) => {
             variant='h3'
             sx={{
               position: 'relative',
-              left: '10vw',
-              top: '20vh',
-              fontSize: '5vw',
+              left: viewPort < 800 ? 10 : 90,
+              top: viewPort < 800 ? 250 : 120,
+              fontSize: viewPort < 800 ? '18vw' : '5vw',
               fontWeight: 'bold',
               color: 'rgb(0,255,255,0%)',
               WebkitTextStroke: '0.5px aqua',
@@ -97,8 +97,8 @@ const Intro = (props) => {
         <IconButton
           variant='contained'
           sx={{
-            marginLeft: 12,
-            marginTop: 15,
+            marginLeft: viewPort < 500 ? 1 : 12,
+            marginTop: viewPort < 500 ? 30 : 15,
             marginBottom: 15
           }}
           onClick={() => changeBackgroundImage()}>
@@ -106,11 +106,8 @@ const Intro = (props) => {
             color='primary'
             aria-label="change background image"
             sx={{
-              position: 'relative',
-              top: '20vh',
-              left: '10vw',
               opacity: '50%',
-              fontSize: '10%',
+              fontSize: '50px',
               transition: 'color 0.25s, opacity 0.25s',
               '&: hover': {
                 color: 'orange',
