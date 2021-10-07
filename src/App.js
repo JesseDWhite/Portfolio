@@ -9,6 +9,7 @@ import { Grid } from '@mui/material';
 import { BACKGROUNDGIFS } from './Constants/BackGroundConstants';
 
 function App() {
+  const [viewPort, setViewPort] = useState(window.innerWidth);
   const [background, setBackground] = useState();
   const [theme, setTheme] = useState(false);
 
@@ -16,6 +17,10 @@ function App() {
     const randomBackground = BACKGROUNDGIFS[Math.floor(Math.random() * BACKGROUNDGIFS.length)];
     setBackground(randomBackground);
   }, [theme])
+
+  useEffect(() => {
+    setViewPort(viewPort)
+  }, [viewPort])
 
   const changeBackgroundImage = () => {
     (!theme) ?
@@ -25,7 +30,9 @@ function App() {
 
   return (
     <>
-      <Contact />
+      <Contact
+        viewPort={viewPort}
+      />
       <Grid
         sx={{
           minHeight: '100vh'
@@ -35,11 +42,18 @@ function App() {
           background={background}
           theme={theme}
           changeBackgroundImage={changeBackgroundImage}
+          viewPort={viewPort}
         />
       </Grid>
-      <Projects />
-      <Experience />
-      <About />
+      <Projects
+        viewPort={viewPort}
+      />
+      <Experience
+        viewPort={viewPort}
+      />
+      <About
+        viewPort={viewPort}
+      />
     </>
   );
 }

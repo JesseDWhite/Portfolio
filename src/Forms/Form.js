@@ -34,7 +34,9 @@ const StyledTextField = styled(TextField)({
   },
 });
 
-const Form = () => {
+const Form = (props) => {
+
+  const { viewPort } = props;
 
   const [formValues, setFormValues] = useState(initialValues);
 
@@ -69,7 +71,8 @@ const Form = () => {
           position: 'relative',
           minHeight: 100,
           bottom: 0,
-          margin: 10,
+          margin: viewPort < 600 ? 1 : 10,
+          marginTop: viewPort < 600 ? 5 : 'none',
           borderRadius: 5,
           backgroundColor: 'rgb(23,58,94)',
           color: formSubmit ? 'rgb(26, 209, 23)' : 'white',
