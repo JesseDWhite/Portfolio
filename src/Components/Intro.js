@@ -33,7 +33,7 @@ const Intro = (props) => {
               transition: 'color 0.50s, left 0.50s, -webkit-text-stroke 0.50s',
               '&: hover': {
                 color: 'rgb(0,255,255,50%)',
-                left: 70,
+                left: viewPort < 800 ? 'none' : 70,
                 WebkitTextStroke: '0.5px aqua',
                 cursor: 'arrow',
                 userSelect: 'none'
@@ -62,7 +62,7 @@ const Intro = (props) => {
               transition: 'color 0.50s, left 0.50s, -webkit-text-stroke 0.50s',
               '&: hover': {
                 color: 'rgb(255,165,0,50%)',
-                left: 220,
+                left: viewPort < 800 ? 'none' : 220,
                 WebkitTextStroke: '1.5px orange',
                 cursor: 'arrow',
                 userSelect: 'none'
@@ -91,7 +91,7 @@ const Intro = (props) => {
               transition: 'color 0.50s, left 0.50s, -webkit-text-stroke 0.50s',
               '&: hover': {
                 color: 'rgb(0,255,255,50%)',
-                left: 100,
+                left: viewPort < 800 ? 'none' : 100,
                 WebkitTextStroke: '0.5px aqua',
                 cursor: 'arrow',
                 userSelect: 'none'
