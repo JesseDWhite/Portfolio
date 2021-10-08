@@ -35,6 +35,8 @@ const Intro = (props) => {
                 color: 'rgb(0,255,255,50%)',
                 left: 70,
                 WebkitTextStroke: '0.5px aqua',
+                cursor: 'arrow',
+                userSelect: 'none'
               }
             }}
           >
@@ -62,6 +64,8 @@ const Intro = (props) => {
                 color: 'rgb(255,165,0,50%)',
                 left: 220,
                 WebkitTextStroke: '1.5px orange',
+                cursor: 'arrow',
+                userSelect: 'none'
               }
             }}
           >
@@ -89,6 +93,8 @@ const Intro = (props) => {
                 color: 'rgb(0,255,255,50%)',
                 left: 100,
                 WebkitTextStroke: '0.5px aqua',
+                cursor: 'arrow',
+                userSelect: 'none'
               }
             }}>
             Full - Stack Developer
