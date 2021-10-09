@@ -18,7 +18,7 @@ const About = (props) => {
         sx={{
           height: '100%',
           backgroundColor: 'rgb(10,25,41)',
-          paddingBottom: 5
+          paddingBottom: 2
         }}
       >
         <Grid
@@ -70,6 +70,7 @@ const About = (props) => {
                 bottom: 0,
                 marginLeft: viewPort < 600 ? 1 : 10,
                 marginTop: viewPort < 600 ? 5 : 10,
+                marginBottom: viewPort < 600 ? 5 : 'none',
                 marginRight: viewPort < 600 ? 1 : 10,
                 padding: 3,
                 borderRadius: 5,
@@ -98,6 +99,9 @@ const About = (props) => {
           <Grid
             xl={6}
             lg={12}
+            sx={{
+              width: '100%'
+            }}
           >
             <Form
               viewPort={viewPort}

@@ -7,6 +7,8 @@ import Experience from './Components/Experience'
 import About from './Components/About';
 import { Grid } from '@mui/material';
 import { BACKGROUNDGIFS } from './Constants/BackGroundConstants';
+import { Element } from 'react-scroll';
+import Footer from './Components/Footer';
 
 function App() {
   const [viewPort, setViewPort] = useState(window.innerWidth);
@@ -38,12 +40,14 @@ function App() {
           minHeight: '100vh'
         }}
       >
-        <Intro
-          background={background}
-          theme={theme}
-          changeBackgroundImage={changeBackgroundImage}
-          viewPort={viewPort}
-        />
+        <Element name='top' className='element'>
+          <Intro
+            background={background}
+            theme={theme}
+            changeBackgroundImage={changeBackgroundImage}
+            viewPort={viewPort}
+          />
+        </Element>
       </Grid>
       <Projects
         viewPort={viewPort}
@@ -54,6 +58,7 @@ function App() {
       <About
         viewPort={viewPort}
       />
+      <Footer />
     </>
   );
 }
