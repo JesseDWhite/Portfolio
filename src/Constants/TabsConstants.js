@@ -15,4 +15,8 @@ export const TABS = [
     tabName: 'ABOUT',
     link: 'about'
   },
+  {
+    tabName: 'CONTACT',
+    link: 'contact'
+  },
 ]

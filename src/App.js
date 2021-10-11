@@ -33,9 +33,9 @@ function App() {
 
   return (
     <>
-      <Contact
+      {/* <Contact
         viewPort={viewPort}
-      />
+      /> */}
       <Grid
         sx={{
           minHeight: '100vh'

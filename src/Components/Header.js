@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-scroll';
 import { Grid, Typography, Chip } from '@mui/material';
 import { TABS } from '../Constants/TabsConstants';
+import Contact from './Contact';
 
 const Header = () => {
   return (
@@ -13,7 +14,7 @@ const Header = () => {
           height: '70px',
           padding: '20px',
           top: 0,
-          backgroundColor: 'rgb(6,16,26,0%)',
+          backgroundColor: 'rgb(6,16,26,100%)',
         }}
       >
         <Typography
@@ -25,11 +26,13 @@ const Header = () => {
             return (
               <Link
                 activeClass='active'
-                className='top'
+                className='header'
                 to={tab.link}
                 spy={true}
                 smooth={true}
-                duration={2000}>
+                duration={2000}
+                offset={-70}
+              >
                 <Chip
                   label={tab.tabName}
                   clickable
@@ -44,6 +47,7 @@ const Header = () => {
               </Link>
             );
           })}
+          <Contact />
         </Typography>
       </Grid>
     </>

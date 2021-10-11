@@ -47,12 +47,12 @@ const Contact = (props) => {
         ariaLabel="Contact Information"
         sx={{
           position: 'fixed',
-          top: viewPort < 600 ? 25 : 80,
+          top: viewPort < 600 ? 25 : 30,
           right: viewPort < 600 ? 25 : 80,
           transition: 'right 0.50s',
-          '&: hover': {
-            right: 90,
-          }
+          // '&: hover': {
+          //   right: 90,
+          // }
         }}
         direction='down'
         icon={<img
@@ -62,12 +62,18 @@ const Contact = (props) => {
             width: 80,
             borderRadius: '100%',
             border: 'solid',
-            borderColor: 'aqua',
+            borderWidth: 10,
+            borderColor: 'rgb(6,16,26)',
           }}
         />}
       >
         {actions.map((action) => (
           <SpeedDialAction
+            sx={{
+              '&: first-child': {
+                marginTop: 2
+              }
+            }}
             key={action.name}
             icon={action.icon}
             tooltipTitle={
