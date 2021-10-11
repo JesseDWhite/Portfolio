@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import './App.css';
 import Intro from './Components/Intro'
 import Projects from './Components/Projects';
-import Contact from './Components/Contact';
 import Experience from './Components/Experience'
 import About from './Components/About';
 import { Grid } from '@mui/material';
@@ -33,15 +32,14 @@ function App() {
 
   return (
     <>
-      {/* <Contact
-        viewPort={viewPort}
-      /> */}
       <Grid
         sx={{
           minHeight: '100vh'
         }}
       >
-        <Element name='top' className='element'>
+        <Element
+          name='top'
+          className='element'>
           <Intro
             background={background}
             theme={theme}
@@ -50,22 +48,31 @@ function App() {
           />
         </Element>
       </Grid>
-      <Element name='projects' className='element'>
+      <Element
+        name='projects'
+        className='element'
+      >
         <Projects
           viewPort={viewPort}
         />
       </Element>
-      <Element name='experience' className='element'>
+      <Element
+        name='experience'
+        className='element'>
         <Experience
           viewPort={viewPort}
         />
       </Element>
-      <Element name='about' className='element'>
+      <Element
+        name='about'
+        className='element'>
         <About
           viewPort={viewPort}
         />
       </Element>
-      <Header />
+      <Header
+        viewPort={viewPort}
+      />
       <Footer />
     </>
   );

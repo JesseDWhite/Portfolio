@@ -56,10 +56,10 @@ const Contact = (props) => {
           src={HeadShot}
           alt='Jesse White Headshot'
           style={{
-            width: 90,
+            width: viewPort < 600 ? 80 : 90,
             borderRadius: '100%',
             border: 'solid',
-            borderWidth: 12,
+            borderWidth: viewPort < 600 ? 8 : 12,
             borderColor: 'rgb(6,16,26)',
           }}
         />}

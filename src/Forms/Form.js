@@ -42,7 +42,6 @@ const Form = (props) => {
 
   const [formSubmit, setFormSubmit] = useState(false);
 
-  const [open, setOpen] = useState(false);
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -59,7 +58,6 @@ const Form = (props) => {
       .then((result) => {
         setFormValues(initialValues);
         setFormSubmit(true);
-        setOpen(true);
       },
         (error) => {
           console.log(error.text)
