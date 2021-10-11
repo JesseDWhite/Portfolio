@@ -9,6 +9,7 @@ import { Grid } from '@mui/material';
 import { BACKGROUNDGIFS } from './Constants/BackGroundConstants';
 import { Element } from 'react-scroll';
 import Footer from './Components/Footer';
+import Header from './Components/Header';
 
 function App() {
   const [viewPort, setViewPort] = useState(window.innerWidth);
@@ -49,15 +50,22 @@ function App() {
           />
         </Element>
       </Grid>
-      <Projects
-        viewPort={viewPort}
-      />
-      <Experience
-        viewPort={viewPort}
-      />
-      <About
-        viewPort={viewPort}
-      />
+      <Element name='projects' className='element'>
+        <Projects
+          viewPort={viewPort}
+        />
+      </Element>
+      <Element name='experience' className='element'>
+        <Experience
+          viewPort={viewPort}
+        />
+      </Element>
+      <Element name='about' className='element'>
+        <About
+          viewPort={viewPort}
+        />
+      </Element>
+      <Header />
       <Footer />
     </>
   );
