@@ -3,7 +3,7 @@ import {
   TextField,
   Button,
   Card,
-  Typography
+  Typography,
 } from '@mui/material';
 import emailjs from 'emailjs-com';
 import { styled } from '@mui/material/styles';
@@ -42,6 +42,8 @@ const Form = (props) => {
 
   const [formSubmit, setFormSubmit] = useState(false);
 
+  const [open, setOpen] = useState(false);
+
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormValues({
@@ -57,6 +59,7 @@ const Form = (props) => {
       .then((result) => {
         setFormValues(initialValues);
         setFormSubmit(true);
+        setOpen(true);
       },
         (error) => {
           console.log(error.text)

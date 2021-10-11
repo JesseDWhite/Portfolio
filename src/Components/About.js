@@ -19,7 +19,8 @@ const About = (props) => {
         sx={{
           height: '100%',
           backgroundColor: 'rgb(10,25,41)',
-          paddingBottom: 2
+          paddingBottom: 2,
+          borderRadius: 0
         }}
       >
         <Grid

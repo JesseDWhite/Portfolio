@@ -47,22 +47,19 @@ const Contact = (props) => {
         ariaLabel="Contact Information"
         sx={{
           position: 'fixed',
-          top: viewPort < 600 ? 25 : 30,
+          top: viewPort < 600 ? 25 : 35,
           right: viewPort < 600 ? 25 : 80,
           transition: 'right 0.50s',
-          // '&: hover': {
-          //   right: 90,
-          // }
         }}
         direction='down'
         icon={<img
           src={HeadShot}
           alt='Jesse White Headshot'
           style={{
-            width: 80,
+            width: 90,
             borderRadius: '100%',
             border: 'solid',
-            borderWidth: 10,
+            borderWidth: 12,
             borderColor: 'rgb(6,16,26)',
           }}
         />}
@@ -71,7 +68,7 @@ const Contact = (props) => {
           <SpeedDialAction
             sx={{
               '&: first-child': {
-                marginTop: 2
+                marginTop: 3
               }
             }}
             key={action.name}
