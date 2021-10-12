@@ -44,6 +44,7 @@ const Header = (props) => {
                   <Menu
                     {...bindMenu(popupState)}
                     TransitionComponent={Fade}
+                    TransitionProps={{ timeout: 500 }}
                   >
                     {TABS.map(tab => {
                       return (
