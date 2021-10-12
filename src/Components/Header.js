@@ -1,33 +1,14 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from 'react-scroll';
-import { Grid, Typography, Chip, Box, Select, MenuItem, FormControl } from '@mui/material';
+import { Grid, Typography, Chip, Menu, MenuItem, IconButton, Fade } from '@mui/material';
 import { TABS } from '../Constants/TabsConstants';
 import Contact from './Contact';
-import { styled } from '@mui/material/styles';
+import PopupState, { bindTrigger, bindMenu } from 'material-ui-popup-state';
+import { MenuRounded } from '@mui/icons-material';
 
 const Header = (props) => {
 
   const { viewPort } = props;
-
-  const StyledSelectField = styled(Select)({
-    '& label': {
-      color: 'white',
-    },
-    '& label.Mui-focused': {
-      color: 'aqua',
-    },
-    '& .MuiOutlinedSelectInput-root': {
-      '& fieldset': {
-        borderColor: 'white',
-      },
-      '&:hover fieldset': {
-        borderColor: 'orange',
-      },
-      '&.Mui-focused fieldset': {
-        borderColor: 'aqua',
-      },
-    },
-  });
 
   return (
     <>
@@ -48,36 +29,44 @@ const Header = (props) => {
           }}
         >
           {viewPort < 1050 ?
-            <FormControl
-              fullWidth
-              label='where to?'
-              sx={{
-                color: 'white'
-              }}
-            >
-              <StyledSelectField
-                defaultValue='HOME'
-                placeholder='WHERE TO?'
-                variant='outlined'
-              >
-                {TABS.map(tab => {
-                  return (
-                    <MenuItem>
-                      <Link
-                        to={tab.link}
-                        activeClass='active'
-                        className='header'
-                        spy={true}
-                        smooth={true}
-                        duration={2000}
-                        offset={-70}>
-                        {tab.tabName}
-                      </Link>
-                    </MenuItem>
-                  )
-                })}
-              </StyledSelectField>
-            </FormControl>
+            <PopupState variant="popover">
+              {(popupState) => (
+                <>
+                  <IconButton
+                    size='small'
+                    sx={{
+                      color: 'lightgray'
+                    }}
+                    {...bindTrigger(popupState)}
+                  >
+                    <MenuRounded fontSize='large' />
+                  </IconButton>
+                  <Menu
+                    {...bindMenu(popupState)}
+                    TransitionComponent={Fade}
+                  >
+                    {TABS.map(tab => {
+                      return (
+                        <MenuItem>
+                          <Link
+                            activeClass='active'
+                            className='header'
+                            to={tab.link}
+                            spy={true}
+                            smooth={true}
+                            duration={2000}
+                            offset={-70}
+                            onClick={popupState.close}
+                          >
+                            {tab.tabName}
+                          </Link>
+                        </MenuItem>
+                      )
+                    })}
+                  </Menu>
+                </>
+              )}
+            </PopupState>
             :
             TABS.map(tab => {
               return (
@@ -98,7 +87,8 @@ const Header = (props) => {
                     sx={{
                       backgroundColor: 'rgb(128,128,128, 0%)',
                       width: 180,
-                      marginRight: 3
+                      marginRight: 3,
+
                     }}
                   />
                 </Link>
@@ -109,7 +99,7 @@ const Header = (props) => {
             viewPort={viewPort}
           />
         </Typography>
-      </Grid>
+      </Grid >
     </>
   );
 }
