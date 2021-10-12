@@ -87,9 +87,8 @@ const Header = (props) => {
                     color='secondary'
                     sx={{
                       backgroundColor: 'rgb(128,128,128, 0%)',
-                      width: 180,
+                      width: viewPort < 1200 ? 120 : 180,
                       marginRight: 3,
-
                     }}
                   />
                 </Link>
@@ -100,7 +99,7 @@ const Header = (props) => {
             viewPort={viewPort}
           />
         </Typography>
-      </Grid >
+      </Grid>
     </>
   );
 }
