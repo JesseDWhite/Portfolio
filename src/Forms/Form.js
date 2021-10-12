@@ -3,7 +3,7 @@ import {
   TextField,
   Button,
   Card,
-  Typography
+  Typography,
 } from '@mui/material';
 import emailjs from 'emailjs-com';
 import { styled } from '@mui/material/styles';

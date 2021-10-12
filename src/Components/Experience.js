@@ -20,7 +20,8 @@ const Experience = (props) => {
     <>
       <Card
         sx={{
-          backgroundColor: 'rgb(6, 16, 26)'
+          backgroundColor: 'rgb(6, 16, 26)',
+          borderRadius: 0
         }}
       >
         <Grid

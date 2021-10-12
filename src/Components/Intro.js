@@ -104,7 +104,7 @@ const Intro = (props) => {
           variant='contained'
           sx={{
             marginLeft: viewPort < 500 ? 1 : 12,
-            marginTop: viewPort < 500 ? 30 : 15,
+            marginTop: viewPort < 500 ? 32 : 15,
             marginBottom: 15
           }}
           onClick={() => changeBackgroundImage()}>

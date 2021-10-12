@@ -7,6 +7,7 @@ import {
 import Forest from '../img/Forest.jpg';
 import Form from '../Forms/Form';
 import { ABOUTCONSTANTS } from '../Constants/AboutConstants';
+import { Element } from 'react-scroll';
 
 const About = (props) => {
 
@@ -18,7 +19,8 @@ const About = (props) => {
         sx={{
           height: '100%',
           backgroundColor: 'rgb(10,25,41)',
-          paddingBottom: 2
+          paddingBottom: 2,
+          borderRadius: 0
         }}
       >
         <Grid
@@ -103,9 +105,11 @@ const About = (props) => {
               width: '100%'
             }}
           >
-            <Form
-              viewPort={viewPort}
-            />
+            <Element name='contact' className='element'>
+              <Form
+                viewPort={viewPort}
+              />
+            </Element>
           </Grid>
         </Grid>
       </Card>

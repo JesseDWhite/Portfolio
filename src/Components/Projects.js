@@ -26,7 +26,7 @@ const Projects = (props) => {
       <Card
         sx={{
           backgroundColor: 'rgb(10,25,41)',
-          boxShadow: 'none',
+          borderRadius: 0
         }}
       >
         <Grid

@@ -2,13 +2,13 @@ import React, { useState, useEffect } from 'react';
 import './App.css';
 import Intro from './Components/Intro'
 import Projects from './Components/Projects';
-import Contact from './Components/Contact';
 import Experience from './Components/Experience'
 import About from './Components/About';
 import { Grid } from '@mui/material';
 import { BACKGROUNDGIFS } from './Constants/BackGroundConstants';
 import { Element } from 'react-scroll';
 import Footer from './Components/Footer';
+import Header from './Components/Header';
 
 function App() {
   const [viewPort, setViewPort] = useState(window.innerWidth);
@@ -32,15 +32,14 @@ function App() {
 
   return (
     <>
-      <Contact
-        viewPort={viewPort}
-      />
       <Grid
         sx={{
           minHeight: '100vh'
         }}
       >
-        <Element name='top' className='element'>
+        <Element
+          name='top'
+          className='element'>
           <Intro
             background={background}
             theme={theme}
@@ -49,13 +48,29 @@ function App() {
           />
         </Element>
       </Grid>
-      <Projects
-        viewPort={viewPort}
-      />
-      <Experience
-        viewPort={viewPort}
-      />
-      <About
+      <Element
+        name='projects'
+        className='element'
+      >
+        <Projects
+          viewPort={viewPort}
+        />
+      </Element>
+      <Element
+        name='experience'
+        className='element'>
+        <Experience
+          viewPort={viewPort}
+        />
+      </Element>
+      <Element
+        name='about'
+        className='element'>
+        <About
+          viewPort={viewPort}
+        />
+      </Element>
+      <Header
         viewPort={viewPort}
       />
       <Footer />
