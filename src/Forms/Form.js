@@ -17,6 +17,7 @@ const initialValues = {
 const StyledTextField = styled(TextField)({
   '& label': {
     color: 'white',
+    zIndex: 0
   },
   '& label.Mui-focused': {
     color: 'aqua',

@@ -70,10 +70,10 @@ function App() {
           viewPort={viewPort}
         />
       </Element>
+      <Footer />
       <Header
         viewPort={viewPort}
       />
-      <Footer />
     </>
   );
 }
