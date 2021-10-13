@@ -17,13 +17,16 @@ import { PROJECTS } from '../Constants/ProjectsConstants';
 import { GitHub } from '@mui/icons-material';
 import Programming from '../img/Programming.jpg';
 
-const Projects = () => {
+const Projects = (props) => {
+
+  const { viewPort } = props;
+
   return (
     <>
       <Card
         sx={{
           backgroundColor: 'rgb(10,25,41)',
-          boxShadow: 'none',
+          borderRadius: 0
         }}
       >
         <Grid
@@ -50,7 +53,7 @@ const Projects = () => {
               left: '50%',
               transform: 'translate(-50%, -50%)',
               fontWeight: 'bold',
-              fontSize: 100,
+              fontSize: viewPort < 600 ? 60 : 100,
               textShadow: 'rgb(10,25,41) -8px 0px 0px',
               color: 'lightgray'
             }}
@@ -80,7 +83,9 @@ const Projects = () => {
                     sx={{
                       position: 'relative',
                       bottom: 0,
-                      margin: 10,
+                      margin: viewPort < 600 ? 1 : 10,
+                      marginBottom: viewPort < 600 ? 5 : 'none',
+                      marginTop: viewPort < 600 ? 5 : 'none',
                       borderRadius: 5,
                       backgroundColor: 'rgb(23,58,94)',
                       color: 'white',

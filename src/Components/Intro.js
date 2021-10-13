@@ -4,7 +4,7 @@ import ColorLensTwoToneIcon from '@mui/icons-material/ColorLensTwoTone';
 
 const Intro = (props) => {
 
-  const { background, changeBackgroundImage } = props
+  const { background, changeBackgroundImage, viewPort } = props
 
   return (
     <>
@@ -21,9 +21,9 @@ const Intro = (props) => {
             variant='h2'
             sx={{
               position: 'relative',
-              left: 50,
-              top: 120,
-              fontSize: '8vw',
+              left: viewPort < 800 ? 10 : 50,
+              top: viewPort < 800 ? 125 : 120,
+              fontSize: viewPort < 800 ? '20vw' : '8vw',
               fontWeight: 'bold',
               color: 'rgb(0,255,255,0%)',
               WebkitTextStroke: '0.5px aqua',
@@ -33,8 +33,10 @@ const Intro = (props) => {
               transition: 'color 0.50s, left 0.50s, -webkit-text-stroke 0.50s',
               '&: hover': {
                 color: 'rgb(0,255,255,50%)',
-                left: 70,
+                left: viewPort < 800 ? 'none' : 70,
                 WebkitTextStroke: '0.5px aqua',
+                cursor: 'arrow',
+                userSelect: 'none'
               }
             }}
           >
@@ -48,9 +50,9 @@ const Intro = (props) => {
             variant='h1'
             sx={{
               position: 'relative',
-              left: 200,
-              top: 120,
-              fontSize: '15vw',
+              left: viewPort < 800 ? 10 : 200,
+              top: viewPort < 800 ? 190 : 120,
+              fontSize: viewPort < 800 ? '20vw' : '15vw',
               fontWeight: 'bold',
               color: 'rgb(255,165,0,0%)',
               WebkitTextStroke: '1.5px orange',
@@ -60,8 +62,10 @@ const Intro = (props) => {
               transition: 'color 0.50s, left 0.50s, -webkit-text-stroke 0.50s',
               '&: hover': {
                 color: 'rgb(255,165,0,50%)',
-                left: 220,
+                left: viewPort < 800 ? 'none' : 220,
                 WebkitTextStroke: '1.5px orange',
+                cursor: 'arrow',
+                userSelect: 'none'
               }
             }}
           >
@@ -75,9 +79,9 @@ const Intro = (props) => {
             variant='h3'
             sx={{
               position: 'relative',
-              left: 90,
-              top: 120,
-              fontSize: '5vw',
+              left: viewPort < 800 ? 10 : 90,
+              top: viewPort < 800 ? 250 : 120,
+              fontSize: viewPort < 800 ? '18vw' : '5vw',
               fontWeight: 'bold',
               color: 'rgb(0,255,255,0%)',
               WebkitTextStroke: '0.5px aqua',
@@ -87,8 +91,10 @@ const Intro = (props) => {
               transition: 'color 0.50s, left 0.50s, -webkit-text-stroke 0.50s',
               '&: hover': {
                 color: 'rgb(0,255,255,50%)',
-                left: 100,
+                left: viewPort < 800 ? 'none' : 100,
                 WebkitTextStroke: '0.5px aqua',
+                cursor: 'arrow',
+                userSelect: 'none'
               }
             }}>
             Full - Stack Developer
@@ -97,8 +103,8 @@ const Intro = (props) => {
         <IconButton
           variant='contained'
           sx={{
-            marginLeft: 12,
-            marginTop: 15,
+            marginLeft: viewPort < 500 ? 1 : 12,
+            marginTop: viewPort < 500 ? 32 : 15,
             marginBottom: 15
           }}
           onClick={() => changeBackgroundImage()}>

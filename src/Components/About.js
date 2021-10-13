@@ -7,15 +7,20 @@ import {
 import Forest from '../img/Forest.jpg';
 import Form from '../Forms/Form';
 import { ABOUTCONSTANTS } from '../Constants/AboutConstants';
+import { Element } from 'react-scroll';
 
-const About = () => {
+const About = (props) => {
+
+  const { viewPort } = props;
+
   return (
     <>
       <Card
         sx={{
           height: '100%',
           backgroundColor: 'rgb(10,25,41)',
-          paddingBottom: 5
+          paddingBottom: 2,
+          borderRadius: 0
         }}
       >
         <Grid
@@ -42,7 +47,7 @@ const About = () => {
               left: '50%',
               transform: 'translate(-50%, -50%)',
               fontWeight: 'bold',
-              fontSize: 100,
+              fontSize: viewPort < 600 ? 60 : 100,
               textShadow: 'rgb(10,25,41) -8px 0px 0px',
               color: 'lightgray'
             }}
@@ -65,9 +70,10 @@ const About = () => {
               sx={{
                 position: 'relative',
                 bottom: 0,
-                marginLeft: 10,
-                marginTop: 10,
-                marginRight: 10,
+                marginLeft: viewPort < 600 ? 1 : 10,
+                marginTop: viewPort < 600 ? 5 : 10,
+                marginBottom: viewPort < 600 ? 5 : 'none',
+                marginRight: viewPort < 600 ? 1 : 10,
                 padding: 3,
                 borderRadius: 5,
                 backgroundColor: 'rgb(23,58,94)',
@@ -95,8 +101,15 @@ const About = () => {
           <Grid
             xl={6}
             lg={12}
+            sx={{
+              width: '100%'
+            }}
           >
-            <Form />
+            <Element name='contact' className='element'>
+              <Form
+                viewPort={viewPort}
+              />
+            </Element>
           </Grid>
         </Grid>
       </Card>

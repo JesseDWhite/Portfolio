@@ -12,12 +12,16 @@ import Work from '../img/Work.jpg';
 import { EXPERIENCECONSTANTS } from '../Constants/ExperienceConstants';
 import Resume from '../doc/Resume - Jesse White.pdf';
 
-const Experience = () => {
+const Experience = (props) => {
+
+  const { viewPort } = props;
+
   return (
     <>
       <Card
         sx={{
-          backgroundColor: 'rgb(6, 16, 26)'
+          backgroundColor: 'rgb(6, 16, 26)',
+          borderRadius: 0
         }}
       >
         <Grid
@@ -44,7 +48,7 @@ const Experience = () => {
               left: '50%',
               transform: 'translate(-50%, -50%)',
               fontWeight: 'bold',
-              fontSize: 100,
+              fontSize: viewPort < 600 ? 60 : 100,
               textShadow: 'rgb(10,25,41) -8px 0px 0px',
               color: 'lightgray'
             }}
@@ -94,7 +98,9 @@ const Experience = () => {
                     sx={{
                       position: 'relative',
                       bottom: 0,
-                      margin: 10,
+                      margin: viewPort < 600 ? 1 : 10,
+                      marginBottom: viewPort < 600 ? 5 : 'none',
+                      marginTop: viewPort < 600 ? 5 : 'none',
                       borderRadius: 5,
                       backgroundColor: 'rgb(23,58,94)',
                       color: 'white',
@@ -160,7 +166,6 @@ const Experience = () => {
                         <Typography
                           variant="body2"
                           sx={{
-                            // textAlign: 'center',
                             fontSize: 15
                           }}
                         >

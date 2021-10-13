@@ -3,7 +3,7 @@ import {
   TextField,
   Button,
   Card,
-  Typography
+  Typography,
 } from '@mui/material';
 import emailjs from 'emailjs-com';
 import { styled } from '@mui/material/styles';
@@ -17,6 +17,7 @@ const initialValues = {
 const StyledTextField = styled(TextField)({
   '& label': {
     color: 'white',
+    zIndex: 0
   },
   '& label.Mui-focused': {
     color: 'aqua',
@@ -34,7 +35,9 @@ const StyledTextField = styled(TextField)({
   },
 });
 
-const Form = () => {
+const Form = (props) => {
+
+  const { viewPort } = props;
 
   const [formValues, setFormValues] = useState(initialValues);
 
@@ -69,7 +72,8 @@ const Form = () => {
           position: 'relative',
           minHeight: 100,
           bottom: 0,
-          margin: 10,
+          margin: viewPort < 600 ? 1 : 10,
+          marginTop: viewPort < 600 ? 5 : 'none',
           borderRadius: 5,
           backgroundColor: 'rgb(23,58,94)',
           color: formSubmit ? 'rgb(26, 209, 23)' : 'white',
