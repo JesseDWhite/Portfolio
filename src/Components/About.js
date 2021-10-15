@@ -74,7 +74,7 @@ const About = (props) => {
                 marginTop: viewPort < 600 ? 5 : 10,
                 marginBottom: viewPort < 600 ? 5 : 'none',
                 marginRight: viewPort < 600 ? 1 : 10,
-                padding: 3,
+                padding: viewPort < 600 ? 1.75 : 3,
                 borderRadius: 5,
                 backgroundColor: 'rgb(23,58,94)',
                 color: 'white',
