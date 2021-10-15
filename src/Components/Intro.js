@@ -20,9 +20,10 @@ const Intro = (props) => {
           <Typography
             variant='h2'
             sx={{
+              textAlign: viewPort < 800 ? 'center' : null,
               position: 'relative',
-              left: viewPort < 800 ? 10 : 50,
-              top: viewPort < 800 ? 125 : 120,
+              left: viewPort < 800 ? 0 : 50,
+              top: viewPort < 800 ? 100 : 120,
               fontSize: viewPort < 800 ? '20vw' : '8vw',
               fontWeight: 'bold',
               color: 'rgb(0,255,255,0%)',
@@ -49,10 +50,11 @@ const Intro = (props) => {
           <Typography
             variant='h1'
             sx={{
+              textAlign: viewPort < 800 ? 'center' : null,
               position: 'relative',
-              left: viewPort < 800 ? 10 : 200,
-              top: viewPort < 800 ? 190 : 120,
-              fontSize: viewPort < 800 ? '20vw' : '15vw',
+              left: viewPort < 800 ? 0 : 200,
+              top: viewPort < 800 ? 100 : 120,
+              fontSize: viewPort < 800 ? '30vw' : '15vw',
               fontWeight: 'bold',
               color: 'rgb(255,165,0,0%)',
               WebkitTextStroke: '1.5px orange',
@@ -78,9 +80,10 @@ const Intro = (props) => {
           <Typography
             variant='h3'
             sx={{
+              textAlign: viewPort < 800 ? 'center' : null,
               position: 'relative',
-              left: viewPort < 800 ? 10 : 90,
-              top: viewPort < 800 ? 250 : 120,
+              left: viewPort < 800 ? 0 : 90,
+              top: viewPort < 800 ? 100 : 120,
               fontSize: viewPort < 800 ? '18vw' : '5vw',
               fontWeight: 'bold',
               color: 'rgb(0,255,255,0%)',
@@ -103,9 +106,10 @@ const Intro = (props) => {
         <IconButton
           variant='contained'
           sx={{
-            marginLeft: viewPort < 500 ? 1 : 12,
-            marginTop: viewPort < 500 ? 32 : 15,
-            marginBottom: 15
+            position: 'relative',
+            left: viewPort < 800 ? 0 : 90,
+            top: viewPort < 800 ? 110 : 120,
+            marginBottom: 20
           }}
           onClick={() => changeBackgroundImage()}>
           <ColorLensTwoToneIcon

@@ -4,6 +4,8 @@ import {
   Button,
   Card,
   Typography,
+  Alert,
+  AlertTitle
 } from '@mui/material';
 import emailjs from 'emailjs-com';
 import { styled } from '@mui/material/styles';
@@ -43,6 +45,8 @@ const Form = (props) => {
 
   const [formSubmit, setFormSubmit] = useState(false);
 
+  const [alert, setAlert] = useState(false);
+
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormValues({
@@ -56,6 +60,7 @@ const Form = (props) => {
 
     emailjs.sendForm('service_xls8lup', 'template_28bjl2k', e.target, 'user_7NqP1g7sWwPQ6DSyyQyFP')
       .then((result) => {
+        setAlert(false);
         setFormValues(initialValues);
         setFormSubmit(true);
       },
@@ -63,6 +68,16 @@ const Form = (props) => {
           console.log(error.text)
         });
   };
+
+  const validateFormFields = (e) => {
+    e.preventDefault();
+
+    if (formValues.name === '' || formValues.email === '' || formValues.message === '') {
+      return setAlert(true);
+    } else {
+      return sendEmail(e);
+    }
+  }
 
   return (
     <>
@@ -78,8 +93,18 @@ const Form = (props) => {
           backgroundColor: 'rgb(23,58,94)',
           color: formSubmit ? 'rgb(26, 209, 23)' : 'white',
           boxShadow: formSubmit ? '0px 0px 0px 3px rgb(26, 209, 23)' : null,
+          transition: 'height 0.50s'
         }}
       >
+        {alert ?
+          <Alert severity='error' variant='filled'>
+            <AlertTitle>
+              Error
+            </AlertTitle>
+            Please complete all form fields before submitting
+          </Alert> :
+          null
+        }
         <Typography
           sx={{
             fontSize: '18px',
@@ -97,8 +122,9 @@ const Form = (props) => {
           </Typography>
           {formSubmit ? null :
             <form
-              onSubmit={sendEmail}
+              onSubmit={validateFormFields}
               id='contactForm'
+              method='POST'
             >
               <StyledTextField
                 fullWidth
@@ -139,16 +165,28 @@ const Form = (props) => {
                 value={formValues.message}
                 onChange={handleInputChange}
               />
+              <div
+                class="g-recaptcha"
+                data-sitekey="6LeI0q8cAAAAAGIry2jEnnREMF3ek6GMRbKZkvwP"
+                data-theme="dark"
+                style={{
+                  marginTop: 20,
+                  marginBottom: 20,
+                }}
+              >
+              </div>
               <Button
                 sx={{
                   width: '100%',
-                  marginTop: 5
                 }}
                 type='submit'
                 variant='contained'
-                color='secondary'>
+                color='secondary'
+              // onClick={validateFormFields}
+              >
                 Submit
               </Button>
+
             </form>
           }
         </Typography>
