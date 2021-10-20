@@ -182,7 +182,6 @@ const Form = (props) => {
                 type='submit'
                 variant='contained'
                 color='secondary'
-              // onClick={validateFormFields}
               >
                 Submit
               </Button>

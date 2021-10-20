@@ -119,17 +119,30 @@ const Projects = (props) => {
                             padding: 3,
                           }}
                         >
-                          <Typography gutterBottom variant="h5" component="div">
+                          <Typography
+                            gutterBottom variant="h5"
+                            component="div"
+                          >
                             {project.name}
                           </Typography>
-                          <Typography variant="body2">
+                          <Typography
+                            variant="body2"
+                          >
                             {project.techStack.map(language => {
                               return (
                                 <Chip
                                   color="secondary"
                                   size="small"
-                                  label={language}
-                                  avatar={<Avatar>{language[0]}</Avatar>}
+                                  label={language.program}
+                                  icon={<i
+                                    className={language.logo}
+                                    style={{
+                                      fontSize: 15,
+                                      // marginLeft: 10
+                                      paddingLeft: 3
+                                    }}
+                                  ></i>}
+                                  // avatar={<Avatar>{language[0]}</Avatar>}
                                   sx={{
                                     marginRight: 1,
                                     marginBottom: 1,
