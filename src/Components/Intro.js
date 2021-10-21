@@ -1,10 +1,13 @@
 import React from 'react';
 import { Typography, Card, IconButton, Grid } from '@mui/material';
 import ColorLensTwoToneIcon from '@mui/icons-material/ColorLensTwoTone';
+import buzzphrase from 'buzzphrase';
 
 const Intro = (props) => {
 
   const { background, changeBackgroundImage, viewPort } = props
+
+  const newBuzzphrase = buzzphrase.get();
 
   return (
     <>
@@ -84,7 +87,8 @@ const Intro = (props) => {
               position: 'relative',
               left: viewPort < 800 ? 0 : 90,
               top: viewPort < 800 ? 100 : 120,
-              fontSize: viewPort < 800 ? '18vw' : '5vw',
+              // fontSize: viewPort < 800 ? '18vw' : '5vw',
+              fontSize: viewPort < 800 ? '15vw' : '4vw',
               fontWeight: 'bold',
               color: 'rgb(0,255,255,0%)',
               WebkitTextStroke: '0.5px aqua',
@@ -100,7 +104,8 @@ const Intro = (props) => {
                 userSelect: 'none'
               }
             }}>
-            Full - Stack Developer
+            {/* Full - Stack Developer */}
+            {newBuzzphrase.toUpperCase()}
           </Typography>
         </Grid>
         <IconButton
