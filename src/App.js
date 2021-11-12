@@ -24,12 +24,6 @@ function App() {
     setViewPort(viewPort)
   }, [viewPort])
 
-  const changeBackgroundImage = () => {
-    (!theme) ?
-      setTheme(true) :
-      setTheme(false)
-  }
-
   return (
     <>
       <Grid
@@ -42,8 +36,8 @@ function App() {
           className='element'>
           <Intro
             background={background}
+            setTheme={setTheme}
             theme={theme}
-            changeBackgroundImage={changeBackgroundImage}
             viewPort={viewPort}
           />
         </Element>
