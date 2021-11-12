@@ -4,7 +4,12 @@ import ColorLensTwoToneIcon from '@mui/icons-material/ColorLensTwoTone';
 
 const Intro = (props) => {
 
-  const { background, changeBackgroundImage, viewPort } = props
+  const {
+    background,
+    viewPort,
+    theme,
+    setTheme
+  } = props
 
   return (
     <>
@@ -111,7 +116,7 @@ const Intro = (props) => {
             top: viewPort < 800 ? 110 : 120,
             marginBottom: 20
           }}
-          onClick={() => changeBackgroundImage()}>
+          onClick={() => setTheme(!theme)}>
           <ColorLensTwoToneIcon
             color='primary'
             aria-label="change background image"
