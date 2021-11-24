@@ -9,6 +9,7 @@ import { BACKGROUNDGIFS } from './Constants/BackGroundConstants';
 import { Element } from 'react-scroll';
 import Footer from './Components/Footer';
 import Header from './Components/Header';
+import { AnimateKeyframes } from 'react-simple-animate';
 
 function App() {
   const [viewPort, setViewPort] = useState(window.innerWidth);
@@ -17,7 +18,7 @@ function App() {
 
   useEffect(() => {
     const randomBackground = BACKGROUNDGIFS[Math.floor(Math.random() * BACKGROUNDGIFS.length)];
-    setBackground(randomBackground);
+    setBackground(randomBackground)
   }, [theme])
 
   useEffect(() => {
@@ -34,12 +35,23 @@ function App() {
         <Element
           name='top'
           className='element'>
-          <Intro
-            background={background}
-            setTheme={setTheme}
-            theme={theme}
-            viewPort={viewPort}
-          />
+          <AnimateKeyframes
+            play
+            iterationCount={1}
+            duration={1}
+            keyframes={[
+              "opacity: 0",
+              "opacity: 1",
+            ]}
+          >
+            <Intro
+              background={background}
+              setTheme={setTheme}
+              theme={theme}
+              viewPort={viewPort}
+            />
+          </AnimateKeyframes>
+
         </Element>
       </Grid>
       <Element
@@ -65,9 +77,19 @@ function App() {
         />
       </Element>
       <Footer />
-      <Header
-        viewPort={viewPort}
-      />
+      <AnimateKeyframes
+        play
+        iterationCount={1}
+        duration={1}
+        keyframes={[
+          "opacity: 0",
+          "opacity: 1",
+        ]}
+      >
+        <Header
+          viewPort={viewPort}
+        />
+      </AnimateKeyframes>
     </>
   );
 }
