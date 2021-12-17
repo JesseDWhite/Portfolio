@@ -10,7 +10,6 @@ import {
   CardActions,
   Chip,
   Avatar,
-  Grow
 } from '@mui/material';
 import { PROJECTS } from '../Constants/ProjectsConstants';
 import { GitHub } from '@mui/icons-material';
