@@ -79,7 +79,7 @@ const Contact = (props) => {
             rel='noopener noreferrer'
             href={action.route}
             TransitionComponent={Grow}
-            TransitionProps={{ timeout: 500 }}
+            TransitionProps={{ timeout: 300 }}
           />
         ))}
       </SpeedDial>
