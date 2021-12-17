@@ -10,7 +10,6 @@ import {
   CardActions,
   Chip,
   Avatar,
-  Tooltip,
   Grow
 } from '@mui/material';
 import { PROJECTS } from '../Constants/ProjectsConstants';
@@ -95,61 +94,52 @@ const Projects = (props) => {
                         bottom: 20
                       }
                     }}>
-                    <Tooltip
-                      title={<h3>VIEW FULL SITE</h3>}
-                      placement='top'
-                      TransitionComponent={Grow}
-                      enterDelay={800}
-                      TransitionProps={{ timeout: 300 }}
-                      arrow
+                    <CardActionArea
+                      target='_blank'
+                      rel='noopener noreferrer'
+                      href={project.link}
                     >
-                      <CardActionArea
-                        target='_blank'
-                        rel='noopener noreferrer'
-                        href={project.link}
+                      <CardMedia
+                        component="img"
+                        height="250"
+                        image={project.image}
+                        alt={`${project.name} splash page`}
+                      />
+                      <CardContent
+                        sx={{
+                          padding: 3,
+                        }}
                       >
-                        <CardMedia
-                          component="img"
-                          height="250"
-                          image={project.image}
-                          alt={`${project.name} splash page`}
-                        />
-                        <CardContent
+                        <Typography gutterBottom variant="h5" component="div">
+                          {project.name}
+                        </Typography>
+                        <Typography variant="body2">
+                          {project.techStack.map(language => {
+                            return (
+                              <Chip
+                                color="secondary"
+                                size="small"
+                                label={language}
+                                avatar={<Avatar>{language[0]}</Avatar>}
+                                sx={{
+                                  marginRight: 1,
+                                  marginBottom: 1,
+                                }}
+                              />
+                            )
+                          })}
+                        </Typography>
+                        <hr />
+                        <Typography
+                          variant="body2"
                           sx={{
-                            padding: 3,
+                            fontSize: '15px'
                           }}
                         >
-                          <Typography gutterBottom variant="h5" component="div">
-                            {project.name}
-                          </Typography>
-                          <Typography variant="body2">
-                            {project.techStack.map(language => {
-                              return (
-                                <Chip
-                                  color="secondary"
-                                  size="small"
-                                  label={language}
-                                  avatar={<Avatar>{language[0]}</Avatar>}
-                                  sx={{
-                                    marginRight: 1,
-                                    marginBottom: 1,
-                                  }}
-                                />
-                              )
-                            })}
-                          </Typography>
-                          <hr />
-                          <Typography
-                            variant="body2"
-                            sx={{
-                              fontSize: '15px'
-                            }}
-                          >
-                            {project.description}
-                          </Typography>
-                        </CardContent>
-                      </CardActionArea>
-                    </Tooltip>
+                          {project.description}
+                        </Typography>
+                      </CardContent>
+                    </CardActionArea>
                     <CardActions>
                       <Button
                         size="block"

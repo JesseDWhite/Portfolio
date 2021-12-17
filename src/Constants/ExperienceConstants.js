@@ -1,5 +1,19 @@
 export const EXPERIENCECONSTANTS = [
   {
+    name: 'SimBco',
+    title: 'Web Developer',
+    startDate: '2021',
+    endDate: 'Current',
+    jobDescription: 'Turn design mock-ups into usable code and make changes based on client needs.',
+    jobDuties: [
+      '- Debug 4-year-old C# project.',
+      '- Translate Figma design into React application.',
+      '- Coordinate with CEO and web designer on workflow and ticket completion.',
+      '- Create Tailwind CSS custom classes for React application.'
+    ],
+    link: 'https://www.simb.co/'
+  },
+  {
     name: 'VALIDATE',
     title: 'Software Developer',
     startDate: '2021',
