@@ -4,23 +4,31 @@ import WishYouWereBeer from '../img/WishYouWereBeer.png';
 import SuperGalacticAgeCalculator from '../img/SuperGalacticAgeCalculator.png';
 import NoMoreCoverLetter from '../img/NoMoreCoverLetter.png';
 import Pizzaria from '../img/Pizzaria.png';
+import Valor from '../img/Valor.png';
 
 export const PROJECTS = [
   {
+    name: 'No More Cover Letter',
+    techStack: ['HTML', 'CSS', 'JavaScript', 'Node.js', 'Mui', 'React', 'Firebase', 'Firestore'],
+    description: 'A good cover letter can set an applicant apart from other candidates. Ideally, the applicant will include keywords/power words from the job posting in their cover letter. They can either manually do this by scanning the job posting and writing them down, or they can use this application to find them programmatically. Once the system has identified them, the user can upload them into the application and it will provide a score based on how many of those words match. This application is currently being utilized by the Coding Bootcamp, Epicodus in their career services department to assist with job placement for students.',
+    link: 'https://nomorecoverletter.com/',
+    repo: 'https://github.com/JesseDWhite/Job-Tracker',
+    image: NoMoreCoverLetter
+  },
+  // {
+  //   name: 'Valor Collegiate Academy',
+  //   techStack: ['HTML', 'TailwindCSS', 'JavaScript', 'Node.js', 'Docker', 'React'],
+  //   description: 'Valor is an all-in-one management system for teachers and faculty of a charter school. It can help manage staff, students, and schedules. This front-end-only application was developed from a Figma design based on client needs.',
+  //   repo: 'https://github.com/JesseDWhite/school-dashboard',
+  //   image: Valor
+  // },
+  {
     name: 'VALIDATE',
-    techStack: ['JavaScript', 'Node.js', 'React', 'Formik', 'AWS', 'Amplify', 'DynamoDB', 'Material Ui', 'GraphQL'],
+    techStack: ['JavaScript', 'Node.js', 'React', 'Formik', 'AWS', 'Amplify', 'DynamoDB', 'Mui', 'GraphQL'],
     description: 'VALIDATE will give small companies and startups the ability to create sophisticated forms that can generate market research for ideas, branding, products, and anything else the user might need.',
     link: 'https://github.com/Indev-Hub/VALIDATEAlpha',
     repo: 'https://github.com/Indev-Hub/VALIDATEAlpha',
     image: Validate
-  },
-  {
-    name: 'No More Cover Letter',
-    techStack: ['HTML', 'CSS', 'JavaScript', 'Node.js', 'Bootstrap', 'React', 'Redux', 'Firebase'],
-    description: 'This application was meant to streamline and de-mistify the process of writing a cover letter for a job application. A good cover letter can really set you apart from other candidates in the applicant pool and a great way to spice up your cover letter, is to include keywords/power words from the job posting into your cover letter. You can manually do this by scanning the job posting and writing them down as you go, or you can use this application to find them for you. Once this system has identified them, include them in your cover letter, upload it into this application and it will give you a letter grade for how many of those words are a match and if you should apply!',
-    link: 'https://no-more-cover-letter.firebaseapp.com/',
-    repo: 'https://github.com/JesseDWhite/no-more-cover-letter',
-    image: NoMoreCoverLetter
   },
   {
     name: 'Wish You Were Beer',
