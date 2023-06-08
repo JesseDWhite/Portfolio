@@ -7,9 +7,11 @@ export const EXPERIENCECONSTANTS = [
     jobDescription: 'Develop custom functionality within an Agile environment to meet internal and customer needs.',
     jobDuties: [
       '- Write custom ETL scripts for geo-spatial data from customer\'s database to development.',
-      '- Create custom heatmap to display up-to-date information of infrastructure status over time.',
+      '- Create a heatmap to display up-to-date information on infrastructure status over time and implement my design into the final product.',
       '- Implement Enterprise Information System frameworks and software solutions through all project phases included architectural design, development and implementation.',
-      '- Develop custom Python scripts for image storage that runs on a schedule.'
+      '- Develop an AWS controller in Python and JavaScript to upload and extract images from the client server to run in the background.',
+      '- Create dynamic dropdown options based on user input.',
+      '- Coordinate with the client on the data model structure for the product and implement the design.'
     ],
     link: 'https://www.gartrellgroup.com/'
   },
