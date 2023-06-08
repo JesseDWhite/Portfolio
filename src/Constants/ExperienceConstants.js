@@ -4,7 +4,7 @@ export const EXPERIENCECONSTANTS = [
     title: 'Full Stack Developer',
     startDate: '2022',
     endDate: 'Current',
-    jobDescription: 'Develop custom functionality within an Agile environment to meet internal and customer needs.',
+    jobDescription: 'Implement Enterprise Information System frameworks and software solutions through all project phases, including architectural design, development, and implementation.',
     jobDuties: [
       '- Write custom ETL scripts for geo-spatial data from customer\'s database to development.',
       '- Create a heatmap to display up-to-date information on infrastructure status over time and implement my design into the final product.',
