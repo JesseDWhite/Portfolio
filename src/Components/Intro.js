@@ -14,8 +14,9 @@ const Intro = (props) => {
   return (
     <>
       <Card
+        className='test2'
         sx={{
-          backgroundColor: 'rgb(6, 16, 26)',
+          // backgroundColor: 'rgb(6, 16, 26)',
           boxShadow: 'none',
         }}
       >
@@ -24,6 +25,7 @@ const Intro = (props) => {
         >
           <Typography
             variant='h2'
+            className='test'
             sx={{
               textAlign: viewPort < 800 ? 'center' : null,
               position: 'relative',
@@ -33,7 +35,15 @@ const Intro = (props) => {
               fontWeight: 'bold',
               color: 'rgb(0,255,255,0%)',
               WebkitTextStroke: '0.5px aqua',
-              backgroundImage: `url(${background})`,
+              // backgroundImage: `url(${background})`,
+              //     backgroundImage: `linear-gradient(
+              //       -45deg, 
+              //       rgba(59,173,227,1) 0%, 
+              //       rgba(87,111,230,1) 25%, 
+              //       rgba(152,68,183,1) 51%, 
+              //       rgba(255,53,127,1) 100%
+              // )`,
+              // animation: 'animation: AnimateBG 20s ease infinite',
               WebkitBackgroundClip: 'text',
               backgroundClip: 'text',
               transition: 'color 0.50s, left 0.50s, -webkit-text-stroke 0.50s',
@@ -54,6 +64,7 @@ const Intro = (props) => {
         >
           <Typography
             variant='h1'
+            className='test'
             sx={{
               textAlign: viewPort < 800 ? 'center' : null,
               position: 'relative',
@@ -63,7 +74,7 @@ const Intro = (props) => {
               fontWeight: 'bold',
               color: 'rgb(255,165,0,0%)',
               WebkitTextStroke: '1.5px orange',
-              backgroundImage: `url(${background})`,
+              // backgroundImage: `url(${background})`,
               WebkitBackgroundClip: 'text',
               backgroundClip: 'text',
               transition: 'color 0.50s, left 0.50s, -webkit-text-stroke 0.50s',
@@ -84,6 +95,7 @@ const Intro = (props) => {
         >
           <Typography
             variant='h3'
+            className='test'
             sx={{
               textAlign: viewPort < 800 ? 'center' : null,
               position: 'relative',
@@ -93,7 +105,7 @@ const Intro = (props) => {
               fontWeight: 'bold',
               color: 'rgb(0,255,255,0%)',
               WebkitTextStroke: '0.5px aqua',
-              backgroundImage: `url(${background})`,
+              // backgroundImage: `url(${background})`,
               WebkitBackgroundClip: 'text',
               backgroundClip: 'text',
               transition: 'color 0.50s, left 0.50s, -webkit-text-stroke 0.50s',
