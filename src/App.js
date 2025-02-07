@@ -7,23 +7,41 @@ import About from './Components/About';
 import { Grid } from '@mui/material';
 import { BACKGROUNDGIFS } from './Constants/BackGroundConstants';
 import { Element } from 'react-scroll';
-import Footer from './Components/Footer';
 import Header from './Components/Header';
 import { AnimateKeyframes } from 'react-simple-animate';
 
 function App() {
-  const [viewPort, setViewPort] = useState(window.innerWidth);
   const [background, setBackground] = useState();
   const [theme, setTheme] = useState(false);
 
   useEffect(() => {
     const randomBackground = BACKGROUNDGIFS[Math.floor(Math.random() * BACKGROUNDGIFS.length)];
     setBackground(randomBackground)
-  }, [theme])
+  }, [theme]);
 
-  useEffect(() => {
-    setViewPort(viewPort)
-  }, [viewPort])
+  const getWindowDimensions = () => {
+    const { innerWidth: width } = window;
+    return {
+      width,
+    };
+  }
+
+  const useWindowDimensions = () => {
+    const [windowDimensions, setWindowDimensions] = useState(getWindowDimensions());
+
+    useEffect(() => {
+      const handleResize = () => {
+        setWindowDimensions(getWindowDimensions());
+      }
+
+      window.addEventListener('resize', handleResize);
+      return () => window.removeEventListener('resize', handleResize);
+    }, []);
+
+    return windowDimensions;
+  }
+
+  const { viewPort } = useWindowDimensions();
 
   return (
     <>
@@ -76,7 +94,6 @@ function App() {
           viewPort={viewPort}
         />
       </Element>
-      <Footer />
       <AnimateKeyframes
         play
         iterationCount={1}

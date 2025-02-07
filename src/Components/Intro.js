@@ -15,8 +15,10 @@ const Intro = (props) => {
     <>
       <Card
         sx={{
-          backgroundColor: 'rgb(6, 16, 26)',
           boxShadow: 'none',
+          backgroundColor: '#130f40',
+          backgroundImage: 'linear-gradient(315deg, #130f40 0%, #000000 74%)',
+          height: '100vh'
         }}
       >
         <Grid

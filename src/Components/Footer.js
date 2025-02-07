@@ -12,7 +12,7 @@ const Footer = () => {
           height: '70px',
           padding: '20px',
           bottom: 0,
-          backgroundColor: 'rgb(10,25,41)'
+          backgroundColor: 'rgba(10,25,41,0)'
         }}
       >
         <Typography

@@ -3,11 +3,12 @@ import {
   Typography,
   Card,
   Grid,
+  Chip
 } from '@mui/material'
 import Forest from '../img/Forest.jpg';
 import Form from '../Forms/Form';
 import { ABOUTCONSTANTS } from '../Constants/AboutConstants';
-import { Element } from 'react-scroll';
+import { Element, Link } from 'react-scroll';
 
 const About = (props) => {
 
@@ -18,7 +19,9 @@ const About = (props) => {
       <Card
         sx={{
           height: '100%',
-          backgroundColor: 'rgb(10,25,41)',
+          boxShadow: 'none',
+          backgroundColor: '#130f40',
+          backgroundImage: 'linear-gradient(315deg, #130f40 0%, #000000 74%)',
           paddingBottom: 2,
           borderRadius: 0
         }}
@@ -112,6 +115,32 @@ const About = (props) => {
             </Element>
           </Grid>
         </Grid>
+
+        <Typography
+          sx={{
+            textAlign: 'center',
+            paddingY: '15px'
+          }}
+        >
+          <Link
+            activeClass='active'
+            className='top'
+            to={'top'}
+            spy={true}
+            smooth={true}
+            duration={2500}>
+            <Chip
+              label='BACK TO TOP'
+              clickable
+              variant='contained'
+              color='secondary'
+              sx={{
+                backgroundColor: 'rgb(128,128,128, 50%)',
+                width: 180
+              }}
+            />
+          </Link>
+        </Typography>
       </Card>
     </>
   )

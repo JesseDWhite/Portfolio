@@ -58,9 +58,9 @@ const Contact = (props) => {
           style={{
             width: viewPort < 600 ? 80 : 90,
             borderRadius: '100%',
-            border: 'solid',
-            borderWidth: viewPort < 600 ? 8 : 12,
-            borderColor: 'rgb(6,16,26)',
+            // border: 'solid',
+            // borderWidth: viewPort < 600 ? 8 : 12,
+            // borderColor: 'rgb(6,16,26)',
           }}
         />}
       >

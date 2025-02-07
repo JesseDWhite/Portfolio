@@ -19,7 +19,7 @@ const Header = (props) => {
           height: '70px',
           padding: '20px',
           top: 0,
-          backgroundColor: 'rgb(6,16,26,100%)',
+          backgroundColor: 'rgba(6,16,26,0)',
         }}
       >
         <Typography

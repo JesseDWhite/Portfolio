@@ -1,17 +1,26 @@
 export const EXPERIENCECONSTANTS = [
   {
+    name: 'IQGeo',
+    title: 'Software Engineer',
+    startDate: '2024',
+    endDate: 'Current',
+    jobDescription: 'Develop new and support existing product releases to meet the growing list of requirements for the platform product and new industry vertical applications',
+    jobDuties: [],
+    link: 'https://www.iqgeo.com/'
+  },
+  {
     name: 'The Gartrell Group',
     title: 'Full Stack Developer',
     startDate: '2022',
-    endDate: 'Current',
+    endDate: '2024',
     jobDescription: 'Implement Enterprise Information System frameworks and software solutions through all project phases, including architectural design, development, and implementation.',
     jobDuties: [
-      '- Write custom ETL scripts for geo-spatial data from customer\'s database to development.',
-      '- Create a heatmap to display up-to-date information on infrastructure status over time and implement my design into the final product.',
-      '- Implement Enterprise Information System frameworks and software solutions through all project phases included architectural design, development and implementation.',
-      '- Develop an AWS controller in Python and JavaScript to upload and extract images from the client server to run in the background.',
-      '- Create dynamic dropdown options based on user input.',
-      '- Coordinate with the client on the data model structure for the product and implement the design.'
+      '- Developed ETL scripts for geospatial data extraction from the customer\'s database.',
+      '- Designed UX and integrated a heatmap feature to visualize infrastructure status changes using React, jQuery, and HTML.',
+      '- Developed an AWS controller in Python and JavaScript, including SQL scripting for image upload and extraction from the client server.',
+      '- Collaborate with the client to define the data model structure and incorporate the design into the product.',
+      '- Conducted daily development tasks in JavaScript, React, HTML, jQuery, Python, and SQL.',
+      '- Optimized deployment and version control processes through the creation of bash scripts.'
     ],
     link: 'https://www.gartrellgroup.com/'
   },
@@ -28,20 +37,6 @@ export const EXPERIENCECONSTANTS = [
       '- Created Tailwind CSS custom classes for React application.'
     ],
     link: 'https://www.simb.co/'
-  },
-  {
-    name: 'VALIDATE',
-    title: 'Software Developer',
-    startDate: '2021',
-    endDate: '2021',
-    jobDescription: 'Develop a React-based application in its alpha stage into a beta version with dev-team.',
-    jobDuties: [
-      '- Refactored original code base and dynamic form fields.',
-      '- Improved performance for UI/UX.',
-      '- Coordinated with CEO and other developers on workflow and ticket completion.',
-      '- Tested feature branches and submitted pull requests.'
-    ],
-    link: 'https://www.linkedin.com/company/validateclub/about/'
   },
   {
     name: 'Rapid Response Bio Clean',

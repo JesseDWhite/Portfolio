@@ -23,8 +23,10 @@ const Projects = (props) => {
     <>
       <Card
         sx={{
-          backgroundColor: 'rgb(10,25,41)',
-          borderRadius: 0
+          borderRadius: 0,
+          boxShadow: 'none',
+          backgroundColor: '#130f40',
+          backgroundImage: 'linear-gradient(315deg, #130f40 0%, #000000 74%)',
         }}
       >
         <Grid
@@ -89,8 +91,8 @@ const Projects = (props) => {
                       color: 'white',
                       transition: 'bottom 0.50s, boxShadow 0.50s',
                       '&: hover': {
-                        boxShadow: '0px 0px 0px 3px pink',
-                        bottom: 20
+                        boxShadow: '0px 0px 0px 3px aqua',
+                        bottom: 8
                       }
                     }}>
                     <CardActionArea
