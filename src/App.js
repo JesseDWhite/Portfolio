@@ -13,35 +13,21 @@ import { AnimateKeyframes } from 'react-simple-animate';
 function App() {
   const [background, setBackground] = useState();
   const [theme, setTheme] = useState(false);
+  const [viewPort, setViewPort] = useState(window.innerWidth);
 
   useEffect(() => {
     const randomBackground = BACKGROUNDGIFS[Math.floor(Math.random() * BACKGROUNDGIFS.length)];
     setBackground(randomBackground)
   }, [theme]);
 
-  const getWindowDimensions = () => {
-    const { innerWidth: width } = window;
-    return {
-      width,
+  useEffect(() => {
+    const handleResize = () => {
+      setViewPort(window.innerWidth);
     };
-  }
 
-  const useWindowDimensions = () => {
-    const [windowDimensions, setWindowDimensions] = useState(getWindowDimensions());
-
-    useEffect(() => {
-      const handleResize = () => {
-        setWindowDimensions(getWindowDimensions());
-      }
-
-      window.addEventListener('resize', handleResize);
-      return () => window.removeEventListener('resize', handleResize);
-    }, []);
-
-    return windowDimensions;
-  }
-
-  const { viewPort } = useWindowDimensions();
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   return (
     <>
