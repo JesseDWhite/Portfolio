@@ -7,7 +7,7 @@ import {
   EmailTwoTone,
   VideoCameraFrontTwoTone,
 } from "@mui/icons-material";
-import HeadShot from "../img/HeadShot.png";
+import HeadShot from "../img/HeadSsot.png";
 
 const Contact = (props) => {
   const { viewPort } = props;
