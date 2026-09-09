@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import {
   Typography,
   Grid,
@@ -10,13 +10,12 @@ import {
   CardActions,
   Chip,
   Avatar,
-} from '@mui/material';
-import { PROJECTS } from '../Constants/ProjectsConstants';
-import { GitHub } from '@mui/icons-material';
-import Programming from '../img/Programming.jpg';
+} from "@mui/material";
+import { PROJECTS } from "../Constants/ProjectsConstants";
+import { GitHub } from "@mui/icons-material";
+import Programming from "../img/Programming.jpg";
 
 const Projects = (props) => {
-
   const { viewPort } = props;
 
   return (
@@ -24,80 +23,75 @@ const Projects = (props) => {
       <Card
         sx={{
           borderRadius: 0,
-          boxShadow: 'none',
-          backgroundColor: '#130f40',
-          backgroundImage: 'linear-gradient(315deg, #130f40 0%, #000000 74%)',
+          boxShadow: "none",
+          backgroundColor: "#434343",
+          backgroundImage: "linear-gradient(147deg, #434343 0%, #000000 74%)",
         }}
       >
         <Grid
           container
           sx={{
-            position: 'relative',
-            textAlign: 'center',
+            position: "relative",
+            textAlign: "center",
           }}
         >
-          <img src={Programming}
+          <img
+            src={Programming}
             style={{
-              width: '100%',
-              height: '60vh',
-              objectFit: 'cover',
-              objectPosition: '12% 12%'
+              width: "100%",
+              height: "60vh",
+              objectFit: "cover",
+              objectPosition: "12% 12%",
             }}
-            alt='Jesse and Katherine in the forest'
+            alt="Jesse and Katherine in the forest"
           />
           <Typography
-            variant='h3'
+            variant="h3"
             sx={{
-              position: 'absolute',
-              top: '50%',
-              left: '50%',
-              transform: 'translate(-50%, -50%)',
-              fontWeight: 'bold',
+              position: "absolute",
+              top: "50%",
+              left: "50%",
+              transform: "translate(-50%, -50%)",
+              fontWeight: "bold",
               fontSize: viewPort < 600 ? 60 : 100,
-              textShadow: 'rgb(10,25,41) -8px 0px 0px',
-              color: 'lightgray'
+              textShadow: "rgb(10,25,41) -8px 0px 0px",
+              color: "lightgray",
             }}
           >
             PORTFOLIO
           </Typography>
         </Grid>
-        <Grid
-          display='flex'
-          flexWrap='wrap'
-        >
+        <Grid display="flex" flexWrap="wrap">
           <Grid
             container
-            direction='row'
+            direction="row"
             alignItems="flex-start"
             justifyContent="flex-start"
           >
-            {PROJECTS.map(project => {
+            {PROJECTS.map((project) => {
               return (
-                <Grid
-                  md={12}
-                  lg={6}
-                  xl={4}
-                >
+                <Grid md={12} lg={6} xl={4}>
                   <Card
                     elevation={5}
                     sx={{
-                      position: 'relative',
+                      position: "relative",
                       bottom: 0,
                       margin: viewPort < 600 ? 1 : 10,
-                      marginBottom: viewPort < 600 ? 5 : 'none',
-                      marginTop: viewPort < 600 ? 5 : 'none',
-                      borderRadius: 5,
-                      backgroundColor: 'rgb(23,58,94)',
-                      color: 'white',
-                      transition: 'bottom 0.50s, boxShadow 0.50s',
-                      '&: hover': {
-                        boxShadow: '0px 0px 0px 3px aqua',
-                        bottom: 8
-                      }
-                    }}>
+                      marginBottom: viewPort < 600 ? 5 : "none",
+                      marginTop: viewPort < 600 ? 5 : "none",
+                      borderRadius: 2,
+                      backgroundColor: "#434343",
+                      color: "white",
+                      transition: "bottom 0.25s, boxShadow 0.25s",
+                      "&: hover": {
+                        boxShadow: "0px 0px 0px 2px gold",
+                        bottom: 3,
+                      },
+                    }}
+                  >
                     <CardActionArea
-                      target='_blank'
-                      rel='noopener noreferrer'
+                      target="_blank"
+                      rel="noopener noreferrer"
                       href={project.link}
                     >
                       <CardMedia
@@ -115,26 +109,29 @@ const Projects = (props) => {
                           {project.name}
                         </Typography>
                         <Typography variant="body2">
-                          {project.techStack.map(language => {
+                          {project.techStack.map((language) => {
                             return (
                               <Chip
-                                color="secondary"
                                 size="small"
-                                label={language}
-                                avatar={<Avatar>{language[0]}</Avatar>}
+                                label={language.lang}
+                                avatar={
+                                  <Avatar>{<img src={language.icon} />}</Avatar>
+                                }
                                 sx={{
                                   marginRight: 1,
                                   marginBottom: 1,
+                                  color: "black",
+                                  backgroundColor: "white",
                                 }}
                               />
-                            )
+                            );
                           })}
                         </Typography>
                         <hr />
                         <Typography
                           variant="body2"
                           sx={{
-                            fontSize: '15px'
+                            fontSize: "15px",
                           }}
                         >
                           {project.description}
@@ -144,13 +141,17 @@ const Projects = (props) => {
                     <CardActions>
                       <Button
                         size="block"
-                        color="secondary"
                         variant="contained"
                         href={project.repo}
                         startIcon={<GitHub />}
                         sx={{
                           margin: 2,
-                          width: '100%'
+                          width: "100%",
+                          color: "black",
+                          backgroundColor: "white",
+                          "&:hover": {
+                            backgroundColor: "#b3b3b3",
+                          },
                         }}
                       >
                         Repo
@@ -158,14 +159,13 @@ const Projects = (props) => {
                     </CardActions>
                   </Card>
                 </Grid>
-              )
+              );
             })}
           </Grid>
         </Grid>
       </Card>
     </>
-  )
+  );
+};
 
-}
-
-export default Projects
+export default Projects;

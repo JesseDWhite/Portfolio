@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import {
   Typography,
   Card,
@@ -6,14 +6,13 @@ import {
   CardActionArea,
   Grid,
   Chip,
-  Button
-} from '@mui/material'
-import Work from '../img/Work.jpg';
-import { EXPERIENCECONSTANTS } from '../Constants/ExperienceConstants';
-import Resume from '../doc/Resume - Jesse White.pdf';
+  Button,
+} from "@mui/material";
+import Work from "../img/Work.jpg";
+import { EXPERIENCECONSTANTS } from "../Constants/ExperienceConstants";
+import Resume from "../doc/Resume - Jesse White.pdf";
 
 const Experience = (props) => {
-
   const { viewPort } = props;
 
   return (
@@ -21,101 +20,104 @@ const Experience = (props) => {
       <Card
         sx={{
           borderRadius: 0,
-          boxShadow: 'none',
-          backgroundColor: '#130f40',
-          backgroundImage: 'linear-gradient(315deg, #130f40 0%, #000000 74%)',
+          boxShadow: "none",
+          backgroundColor: "#434343",
+          backgroundImage: "linear-gradient(147deg, #434343 0%, #000000 74%)",
         }}
       >
         <Grid
           container
           sx={{
-            position: 'relative',
-            textAlign: 'center',
+            position: "relative",
+            textAlign: "center",
           }}
         >
-          <img src={Work}
+          <img
+            src={Work}
             style={{
-              width: '100%',
-              height: '60vh',
-              objectFit: 'cover',
-              objectPosition: '12% 12%'
+              width: "100%",
+              height: "60vh",
+              objectFit: "cover",
+              objectPosition: "12% 12%",
             }}
-            alt='Jesse and Katherine in the forest'
+            alt="Jesse and Katherine in the forest"
           />
           <Typography
-            variant='h3'
+            variant="h3"
             sx={{
-              position: 'absolute',
-              top: '50%',
-              left: '50%',
-              transform: 'translate(-50%, -50%)',
-              fontWeight: 'bold',
+              position: "absolute",
+              top: "50%",
+              left: "50%",
+              transform: "translate(-50%, -50%)",
+              fontWeight: "bold",
               fontSize: viewPort < 600 ? 60 : 100,
-              textShadow: 'rgb(10,25,41) -8px 0px 0px',
-              color: 'lightgray'
+              textShadow: "rgb(10,25,41) -8px 0px 0px",
+              color: "lightgray",
             }}
           >
             EXPERIENCE
             <Typography>
               <a
                 style={{
-                  textDecoration: 'none'
+                  textDecoration: "none",
                 }}
                 href={Resume}
-                download='Jesse White'>
+                download="Jesse White"
+              >
                 <Button
-                  color='secondary'
-                  variant='contained'
+                  variant="contained"
+                  sx={{
+                    color: "black",
+                    backgroundColor: "white",
+                    "&:hover": {
+                      backgroundColor: "#b3b3b3",
+                    },
+                  }}
                 >
                   Download Resume
                 </Button>
               </a>
             </Typography>
           </Typography>
-
         </Grid>
         <Grid
-          display='flex'
-          flexWrap='wrap'
+          display="flex"
+          flexWrap="wrap"
           sx={{
-            color: 'white',
-            minHeight: '100vh'
+            color: "white",
+            minHeight: "100vh",
           }}
         >
           <Grid
             container
-            direction='row'
+            direction="row"
             alignItems="flex-start"
             justifyContent="flex-start"
           >
-            {EXPERIENCECONSTANTS.map(experience => {
+            {EXPERIENCECONSTANTS.map((experience) => {
               return (
-                <Grid
-                  md={12}
-                  lg={6}
-                  xl={6}
-                >
+                <Grid md={12} lg={6} xl={6}>
                   <Card
                     elevation={5}
                     sx={{
-                      position: 'relative',
+                      position: "relative",
                       bottom: 0,
                       margin: viewPort < 600 ? 1 : 10,
-                      marginBottom: viewPort < 600 ? 5 : 'none',
-                      marginTop: viewPort < 600 ? 5 : 'none',
-                      borderRadius: 5,
-                      backgroundColor: 'rgb(23,58,94)',
-                      color: 'white',
-                      transition: 'bottom 0.50s, boxShadow 0.50s',
-                      '&: hover': {
-                        boxShadow: '0px 0px 0px 3px aqua',
-                        bottom: 8
-                      }
+                      marginBottom: viewPort < 600 ? 5 : "none",
+                      marginTop: viewPort < 600 ? 5 : "none",
+                      borderRadius: 2,
+                      backgroundColor: "#434343",
+                      color: "white",
+                      transition: "bottom 0.25s, boxShadow 0.25s",
+                      "&: hover": {
+                        boxShadow: "0px 0px 0px 2px gold",
+                        bottom: 3,
+                      },
                     }}
                   >
                     <CardActionArea
-                      target='_blank'
-                      rel='noopener noreferrer'
+                      target="_blank"
+                      rel="noopener noreferrer"
                       href={experience.link}
                     >
                       <CardContent
@@ -128,7 +130,7 @@ const Experience = (props) => {
                           variant="h5"
                           component="div"
                           sx={{
-                            textAlign: 'center',
+                            textAlign: "center",
                           }}
                         >
                           {experience.name}
@@ -138,27 +140,28 @@ const Experience = (props) => {
                           variant="h5"
                           component="div"
                           sx={{
-                            textAlign: 'center',
-                            fontSize: 20
+                            textAlign: "center",
+                            fontSize: 20,
                           }}
                         >
                           {experience.title}
                         </Typography>
                         <Chip
                           label={`${experience.startDate} - ${experience.endDate}`}
-                          color='secondary'
                           sx={{
                             marginBottom: 1,
-                            position: 'relative',
-                            left: '50%',
-                            transform: 'translate(-50%)',
+                            position: "relative",
+                            left: "50%",
+                            transform: "translate(-50%)",
+                            color: "black",
+                            backgroundColor: "white",
                           }}
                         />
                         <Typography
                           sx={{
-                            fontStyle: 'italic',
-                            textAlign: 'center',
-                            fontSize: 15
+                            fontStyle: "italic",
+                            textAlign: "center",
+                            fontSize: 15,
                           }}
                           variant="body2"
                         >
@@ -168,33 +171,32 @@ const Experience = (props) => {
                         <Typography
                           variant="body2"
                           sx={{
-                            fontSize: 15
+                            fontSize: 15,
                           }}
                         >
-                          {experience.jobDuties.map(duty => {
+                          {experience.jobDuties.map((duty) => {
                             return (
                               <Typography
                                 sx={{
-                                  marginBottom: 1
+                                  marginBottom: 1,
                                 }}
-                              >{duty}
+                              >
+                                {duty}
                               </Typography>
-                            )
+                            );
                           })}
                         </Typography>
                       </CardContent>
                     </CardActionArea>
                   </Card>
                 </Grid>
-              )
-            })
-            }
+              );
+            })}
           </Grid>
         </Grid>
       </Card>
     </>
-  )
-
-}
+  );
+};
 
 export default Experience;
