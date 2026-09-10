@@ -51,8 +51,10 @@ const Experience = (props) => {
               transform: "translate(-50%, -50%)",
               fontWeight: "bold",
               fontSize: viewPort < 600 ? 60 : 100,
-              textShadow: "rgb(10,25,41) -8px 0px 0px",
+              textShadow: "rgb(0, 0, 0) -8px 0px 0px",
               color: "lightgray",
+              letterSpacing: "5px",
+              userSelect: "none",
             }}
           >
             EXPERIENCE
@@ -108,7 +110,7 @@ const Experience = (props) => {
                       borderRadius: 2,
                       backgroundColor: "#434343",
                       color: "white",
-                      transition: "bottom 0.25s, boxShadow 0.25s",
+                      transition: "bottom 0.25s, box-shadow 0.15s ease-in-out",
                       "&: hover": {
                         boxShadow: "0px 0px 0px 2px white",
                         bottom: 3,

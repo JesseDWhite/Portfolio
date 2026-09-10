@@ -46,8 +46,10 @@ const About = (props) => {
               transform: "translate(-50%, -50%)",
               fontWeight: "bold",
               fontSize: viewPort < 600 ? 60 : 100,
-              textShadow: "rgb(10,25,41) -8px 0px 0px",
+              textShadow: "rgb(0, 0, 0) -8px 0px 0px",
               color: "lightgray",
+              letterSpacing: "5px",
+              userSelect: "none",
             }}
           >
             ABOUT ME
