@@ -112,10 +112,6 @@ export const PROJECTS = [
         icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg",
       },
       {
-        lang: "Vite",
-        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vitejs/vitejs-original.svg",
-      },
-      {
         lang: "React",
         icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg",
       },
@@ -157,11 +153,6 @@ export const PROJECTS = [
         lang: "CSS",
         icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg",
       },
-      {
-        lang: "Vite",
-        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vitejs/vitejs-original.svg",
-      },
-
       {
         lang: "HTML",
         icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg",
