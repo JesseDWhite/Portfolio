@@ -1,9 +1,21 @@
-import React from "react";
-import { Typography, Card, IconButton, Grid } from "@mui/material";
-import ColorLensTwoToneIcon from "@mui/icons-material/ColorLensTwoTone";
+import React, { useState } from "react";
+import { Typography, Card, Grid } from "@mui/material";
+import { BACKGROUNDGIFS } from "../Constants/BackGroundConstants";
+
+const getRandomBackground = () =>
+  BACKGROUNDGIFS[Math.floor(Math.random() * BACKGROUNDGIFS.length)];
 
 const Intro = (props) => {
-  const { background, viewPort, theme, setTheme } = props;
+  const { viewPort } = props;
+  const [greetingBackground, setGreetingBackground] = useState(
+    getRandomBackground(),
+  );
+  const [nameBackground, setNameBackground] = useState(getRandomBackground());
+  const [titleBackground, setTitleBackground] = useState(getRandomBackground());
+
+  const handleUpdateBackground = (setter) => () => {
+    setter(getRandomBackground());
+  };
 
   return (
     <>
@@ -18,7 +30,7 @@ const Intro = (props) => {
         <Grid lg={6}>
           <Typography
             variant="h2"
-            onClick={() => setTheme(!theme)}
+            onClick={handleUpdateBackground(setGreetingBackground)}
             sx={{
               textAlign: viewPort < 800 ? "center" : null,
               position: "relative",
@@ -28,7 +40,7 @@ const Intro = (props) => {
               fontWeight: "bold",
               color: "rgb(0,255,255,0%)",
               WebkitTextStroke: "0.5px white",
-              backgroundImage: `url(${background})`,
+              backgroundImage: `url(${greetingBackground})`,
               WebkitBackgroundClip: "text",
               backgroundClip: "text",
               transition: "color 0.50s, left 0.50s, -webkit-text-stroke 0.50s",
@@ -47,7 +59,7 @@ const Intro = (props) => {
         <Grid lg={12}>
           <Typography
             variant="h1"
-            onClick={() => setTheme(!theme)}
+            onClick={handleUpdateBackground(setNameBackground)}
             sx={{
               textAlign: viewPort < 800 ? "center" : null,
               position: "relative",
@@ -57,14 +69,14 @@ const Intro = (props) => {
               fontWeight: "bold",
               color: "rgb(255,165,0,0%)",
               WebkitTextStroke: "1.5px white",
-              backgroundImage: `url(${background})`,
+              backgroundImage: `url(${nameBackground})`,
               WebkitBackgroundClip: "text",
               backgroundClip: "text",
               transition: "color 0.50s, left 0.50s, -webkit-text-stroke 0.50s",
               "&: hover": {
                 color: "rgb(255,255,255,50%)",
                 left: viewPort < 800 ? "none" : 220,
-                WebkitTextStroke: "1.5px gold",
+                WebkitTextStroke: "1.5px white",
                 cursor: "pointer",
                 userSelect: "none",
               },
@@ -76,7 +88,7 @@ const Intro = (props) => {
         <Grid lg={12}>
           <Typography
             variant="h3"
-            onClick={() => setTheme(!theme)}
+            onClick={handleUpdateBackground(setTitleBackground)}
             sx={{
               textAlign: viewPort < 800 ? "center" : null,
               position: "relative",
@@ -86,7 +98,7 @@ const Intro = (props) => {
               fontWeight: "bold",
               color: "rgb(0,255,255,0%)",
               WebkitTextStroke: "0.5px white",
-              backgroundImage: `url(${background})`,
+              backgroundImage: `url(${titleBackground})`,
               WebkitBackgroundClip: "text",
               backgroundClip: "text",
               transition: "color 0.50s, left 0.50s, -webkit-text-stroke 0.50s",

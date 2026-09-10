@@ -6,7 +6,15 @@ export const EXPERIENCECONSTANTS = [
     endDate: "Current",
     jobDescription:
       "Develop new and support existing product releases to meet the growing list of requirements for the platform product and new industry vertical applications",
-    jobDuties: [],
+    jobDuties: [
+      "\u2023 Lead the implementation, customization, deployment, and support of IQGeo solutions for utility and telecom customers.",
+      "\u2023 Design, develop, troubleshoot, and maintain custom software solutions using JavaScript, Python, SQL, Bash, HTML, and CSS.",
+      "\u2023 Mentor developers and delivery team members, providing guidance on architecture, platform capabilities, and complex technical problem resolution.",
+      "\u2023 Own customer issues end-to-end, from requirements gathering and root cause analysis through implementation, testing, deployment, and production support.",
+      "\u2023 Architect and maintain CI/CD, cloud, and deployment solutions utilizing Docker, Kubernetes, Azure Pipelines, GitHub Actions, and related DevOps technologies.",
+      "\u2023 Develop and support ETL processes, data migration solutions, data synchronization workflows, and integration services for customer environments.",
+      "\u2023 Collaborate directly with customers during implementation, UAT, training, and go-live activities, providing technical expertise and ensuring successful project outcomes.",
+    ],
     link: "https://www.iqgeo.com/",
   },
   {

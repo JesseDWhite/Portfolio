@@ -110,7 +110,7 @@ const Experience = (props) => {
                       color: "white",
                       transition: "bottom 0.25s, boxShadow 0.25s",
                       "&: hover": {
-                        boxShadow: "0px 0px 0px 2px gold",
+                        boxShadow: "0px 0px 0px 2px white",
                         bottom: 3,
                       },
                     }}

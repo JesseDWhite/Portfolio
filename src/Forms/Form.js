@@ -29,7 +29,7 @@ const StyledTextField = styled(TextField)({
       borderColor: "white",
     },
     "&:hover fieldset": {
-      borderColor: "gold",
+      borderColor: "white",
     },
     "&.Mui-focused fieldset": {
       borderColor: "white",
