@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useLayoutEffect } from "react";
 import {
   TextField,
   Button,
@@ -45,6 +45,25 @@ const Form = (props) => {
   const [formSubmit, setFormSubmit] = useState(false);
 
   const [alert, setAlert] = useState(false);
+
+  const [cardHeight, setCardHeight] = useState(null);
+
+  const contentRef = useRef(null);
+
+  useLayoutEffect(() => {
+    if (formSubmit || !contentRef.current) {
+      return;
+    }
+
+    // recaptcha injects its iframe asynchronously, so keep measuring until it's rendered
+    const observer = new ResizeObserver(([entry]) => {
+      setCardHeight(entry.target.scrollHeight);
+    });
+
+    observer.observe(contentRef.current);
+
+    return () => observer.disconnect();
+  }, [formSubmit, viewPort, alert]);
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -96,7 +115,8 @@ const Form = (props) => {
         elevation={5}
         sx={{
           position: "relative",
-          minHeight: 100,
+          height: formSubmit ? 135 : cardHeight || "auto",
+          overflow: "hidden",
           bottom: 0,
           margin: viewPort < 600 ? 1 : 10,
           marginTop: viewPort < 600 ? 5 : "none",
@@ -104,7 +124,7 @@ const Form = (props) => {
           backgroundColor: "#434343",
           color: formSubmit ? "rgb(26, 209, 23)" : "white",
           boxShadow: formSubmit ? "0px 0px 0px 3px rgb(26, 209, 23)" : null,
-          transition: "height 0.50s",
+          transition: "height 0.5s ease, box-shadow 0.5s ease, color 0.5s ease",
         }}
       >
         {alert ? (
@@ -114,6 +134,7 @@ const Form = (props) => {
           </Alert>
         ) : null}
         <Typography
+          ref={contentRef}
           sx={{
             fontSize: "18px",
             padding: 3,
@@ -123,10 +144,11 @@ const Form = (props) => {
             variant="h4"
             sx={{
               textAlign: "center",
-              marginBottom: 3,
+              paddingBottom: 3,
+              paddingTop: formSubmit ? 3 : 0,
             }}
           >
-            {formSubmit ? "THANKS!" : "CONTACT ME"}
+            {formSubmit ? "I'LL BE IN TOUCH" : "CONTACT ME"}
           </Typography>
           {formSubmit ? null : (
             <form onSubmit={validateFormFields} id="contactForm" method="POST">
@@ -189,7 +211,6 @@ const Form = (props) => {
                 }}
                 type="submit"
                 variant="contained"
-                // onClick={validateFormFields}
               >
                 Submit
               </Button>

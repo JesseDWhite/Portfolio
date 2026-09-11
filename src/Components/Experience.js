@@ -50,7 +50,7 @@ const Experience = (props) => {
               left: "50%",
               transform: "translate(-50%, -50%)",
               fontWeight: "bold",
-              fontSize: viewPort < 600 ? 60 : 100,
+              fontSize: viewPort < 600 ? 55 : 100,
               textShadow: "rgb(0, 0, 0) -8px 0px 0px",
               color: "lightgray",
               letterSpacing: "5px",
