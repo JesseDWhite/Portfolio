@@ -100,7 +100,7 @@ const Form = (props) => {
           bottom: 0,
           margin: viewPort < 600 ? 1 : 10,
           marginTop: viewPort < 600 ? 5 : "none",
-          borderRadius: 5,
+          borderRadius: 2,
           backgroundColor: "#434343",
           color: formSubmit ? "rgb(26, 209, 23)" : "white",
           boxShadow: formSubmit ? "0px 0px 0px 3px rgb(26, 209, 23)" : null,
