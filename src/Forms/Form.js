@@ -1,12 +1,5 @@
-import React, { useState, useRef, useLayoutEffect } from "react";
-import {
-  TextField,
-  Button,
-  Card,
-  Typography,
-  Alert,
-  AlertTitle,
-} from "@mui/material";
+import { useState, useRef, useLayoutEffect } from "react";
+import { TextField, Button, Card, Typography } from "@mui/material";
 import emailjs from "emailjs-com";
 import { styled } from "@mui/material/styles";
 
@@ -97,16 +90,7 @@ const Form = (props) => {
 
   const validateFormFields = (e) => {
     e.preventDefault();
-
-    if (
-      formValues.name === "" ||
-      formValues.email === "" ||
-      formValues.message === ""
-    ) {
-      return setAlert(true);
-    } else {
-      return sendEmail(e);
-    }
+    if (formValues.name || formValues.email) return sendEmail(e);
   };
 
   return (
@@ -127,12 +111,6 @@ const Form = (props) => {
           transition: "height 0.5s ease, box-shadow 0.5s ease, color 0.5s ease",
         }}
       >
-        {alert ? (
-          <Alert severity="error" variant="filled">
-            <AlertTitle>Error</AlertTitle>
-            Please complete all form fields before submitting
-          </Alert>
-        ) : null}
         <Typography
           ref={contentRef}
           sx={{
@@ -153,8 +131,8 @@ const Form = (props) => {
           {formSubmit ? null : (
             <form onSubmit={validateFormFields} id="contactForm" method="POST">
               <StyledTextField
+                required
                 fullWidth
-                color="warning"
                 variant="outlined"
                 id="nameInput"
                 name="name"
@@ -165,10 +143,10 @@ const Form = (props) => {
               />
               <StyledTextField
                 fullWidth
+                required
                 sx={{
                   marginTop: 3,
                 }}
-                color="warning"
                 id="emailInput"
                 name="email"
                 label="Email Address"
