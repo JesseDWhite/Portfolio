@@ -1,5 +1,5 @@
 import { useState, useRef, useLayoutEffect } from "react";
-import { TextField, Button, Card, Typography } from "@mui/material";
+import { TextField, Button, Card, Typography, Stack } from "@mui/material";
 import emailjs from "emailjs-com";
 import { styled } from "@mui/material/styles";
 
@@ -40,6 +40,8 @@ const Form = (props) => {
   const [alert, setAlert] = useState(false);
 
   const [cardHeight, setCardHeight] = useState(null);
+
+  const [disabled, setDisabled] = useState(false);
 
   const contentRef = useRef(null);
 
@@ -158,6 +160,7 @@ const Form = (props) => {
                 fullWidth
                 sx={{
                   marginTop: 3,
+                  marginBottom: 3,
                 }}
                 color="warning"
                 id="messageInput"
@@ -169,15 +172,6 @@ const Form = (props) => {
                 value={formValues.message}
                 onChange={handleInputChange}
               />
-              <div
-                class="g-recaptcha"
-                data-sitekey="6LeI0q8cAAAAAGIry2jEnnREMF3ek6GMRbKZkvwP"
-                data-theme="dark"
-                style={{
-                  marginTop: 20,
-                  marginBottom: 20,
-                }}
-              ></div>
               <Button
                 sx={{
                   width: "100%",
